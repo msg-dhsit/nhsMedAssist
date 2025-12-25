@@ -8,7 +8,7 @@ import streamlit as st
 
 path = os.getcwd()
 sys.path.append(path)
-from src.scripts.models.azureOpenAI_st import aiResp
+from src.scripts.ui.azureOpenAI_st import aiResp
 
 st.set_page_config(layout='wide',
                    page_title='AI MedAssitant',

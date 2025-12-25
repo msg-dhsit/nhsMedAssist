@@ -1,0 +1,1474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Surekha Hospital 360 — MVP Demo</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a2e;
+      --panel2:#111f38;
+      --muted:#93a4c7;
+      --text:#e8efff;
+      --brand:#3b82f6;
+      --good:#22c55e;
+      --warn:#f59e0b;
+      --bad:#ef4444;
+      --border:rgba(255,255,255,.08);
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius2: 12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 800px at 20% 0%, #12234a 0%, var(--bg) 50%, #070c16 100%);
+      color:var(--text);
+    }
+    .app{
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      min-height:100vh;
+    }
+    .sidebar{
+      border-right:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      padding:18px 14px;
+      position:sticky;
+      top:0;
+      height:100vh;
+    }
+    .brand{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 10px 18px 10px;
+    }
+    .logo{
+      width:36px;height:36px;border-radius:12px;
+      background: radial-gradient(circle at 30% 30%, #60a5fa, #1d4ed8);
+      box-shadow: var(--shadow);
+    }
+    .brand h1{
+      font-size:14px;
+      margin:0;
+      letter-spacing:.3px;
+    }
+    .brand p{
+      margin:2px 0 0 0;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .nav{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      padding:8px;
+    }
+    .nav button{
+      all:unset;
+      cursor:pointer;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      color:var(--text);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+    }
+    .nav button:hover{
+      background: rgba(255,255,255,.04);
+      border-color: var(--border);
+    }
+    .nav button.active{
+      background: rgba(59,130,246,.18);
+      border-color: rgba(59,130,246,.35);
+    }
+    .badge{
+      font-size:11px;
+      color:var(--muted);
+      padding:2px 8px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+    }
+    .content{
+      padding:18px 20px 60px 20px;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      padding:8px 2px 14px 2px;
+    }
+    .title h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .title .subtitle{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    .filters{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .filters .field{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      border-radius: 12px;
+      padding:8px 10px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    .filters label{
+      font-size:11px;
+      color:var(--muted);
+    }
+    select{
+      background: transparent;
+      color: var(--text);
+      border: none;
+      outline: none;
+      font-size:12px;
+      cursor:pointer;
+    }
+    option{ color:#0b1220; }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:14px;
+      overflow:hidden;
+    }
+    .card h3{
+      margin:0 0 10px 0;
+      font-size:13px;
+      color:#d6e3ff;
+      letter-spacing:.2px;
+    }
+    .kpis{
+      grid-column: 1 / -1;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    .kpi{
+      grid-column: span 3;
+      padding:12px;
+      border-radius: 14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      cursor:pointer;
+      transition: transform .08s ease;
+    }
+    .kpi:active{ transform: scale(.99); }
+    .kpi .label{
+      font-size:11px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:8px;
+      align-items:center;
+    }
+    .kpi .value{
+      margin-top:8px;
+      font-size:22px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .kpi .delta{
+      margin-top:6px;
+      font-size:11px;
+      color:var(--muted);
+    }
+    .pill{
+      font-size:11px;
+      padding:2px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.02);
+    }
+    .pill.good{ color: var(--good); border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.08); }
+    .pill.warn{ color: var(--warn); border-color: rgba(245,158,11,.35); background: rgba(245,158,11,.08); }
+    .pill.bad{ color: var(--bad); border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.08); }
+
+    .span-6{ grid-column: span 6; }
+    .span-4{ grid-column: span 4; }
+    .span-8{ grid-column: span 8; }
+    .span-12{ grid-column: span 12; }
+
+    .row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-bottom:10px;
+    }
+    .muted{ color:var(--muted); font-size:12px; }
+    canvas{ width:100% !important; height:280px !important; }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:12px;
+    }
+    th, td{
+      padding:10px 8px;
+      border-bottom:1px solid var(--border);
+      text-align:left;
+      vertical-align:top;
+    }
+    th{ color:#cfe0ff; font-weight:600; font-size:12px; }
+    td{ color:#e7efff; }
+    .link{
+      color:#93c5fd;
+      cursor:pointer;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+
+    .hidden{ display:none !important; }
+
+    /* Responsive */
+    @media (max-width: 1100px){
+      .app{ grid-template-columns: 1fr; }
+      .sidebar{ position:relative; height:auto; }
+      .kpi{ grid-column: span 6; }
+      .span-6,.span-4,.span-8{ grid-column: span 12; }
+      canvas{ height:260px !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Surekha Hospital 360</h1>
+          <p>MVP Demo Analytics App</p>
+        </div>
+      </div>
+
+      <div class="nav" id="nav">
+        <button data-page="home" class="active">
+          <span>Home (Executive)</span><span class="badge">KPIs</span>
+        </button>
+        <button data-page="flow">
+          <span>Patient Flow</span><span class="badge">OPD/ER/IPD</span>
+        </button>
+        <button data-page="clinical">
+          <span>Clinical Quality</span><span class="badge">Outcomes</span>
+        </button>
+        <button data-page="doctors">
+          <span>Doctor Scorecards</span><span class="badge">Performance</span>
+        </button>
+        <button data-page="pharmacy">
+          <span>Pharmacy & Inventory</span><span class="badge">Stock</span>
+        </button>
+        <button data-page="finance">
+          <span>Finance (RCM)</span><span class="badge">Claims</span>
+        </button>
+        <button data-page="alerts">
+          <span>Alerts & Actions</span><span class="badge">Rules</span>
+        </button>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3>Demo Notes</h3>
+        <div class="muted">
+          • Click KPI tiles to jump to relevant pages.<br/>
+          • Use filters (top-right) to change the story.<br/>
+          • Data is synthetic for MVP demo.
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <div class="title">
+          <h2 id="pageTitle">Home — Executive Cockpit</h2>
+          <div class="subtitle" id="pageSubtitle">Hospital-wide KPIs with trends, drilldowns, and rule-based alerts.</div>
+        </div>
+
+        <div class="filters">
+          <div class="field">
+            <label for="dateRange">Range</label>
+            <select id="dateRange">
+              <option value="today">Today</option>
+              <option value="7" selected>Last 7 Days</option>
+              <option value="30">Last 30 Days</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="department">Department</label>
+            <select id="department">
+              <option value="All" selected>All</option>
+              <option value="Emergency">Emergency</option>
+              <option value="ICU">ICU</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Orthopedics">Orthopedics</option>
+              <option value="General Medicine">General Medicine</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="payer">Payer</label>
+            <select id="payer">
+              <option value="All" selected>All</option>
+              <option value="Cash">Cash</option>
+              <option value="Insurance">Insurance</option>
+              <option value="Corporate">Corporate</option>
+              <option value="Government">Government</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOME -->
+      <section id="page-home" class="page">
+        <div class="kpis" id="kpiGrid"></div>
+
+        <div class="grid" style="margin-top:14px;">
+          <div class="card span-8">
+            <div class="row">
+              <h3>Admissions vs Discharges</h3>
+              <div class="muted" id="trendLabel1">Last 7 days</div>
+            </div>
+            <canvas id="chartAdmissions"></canvas>
+          </div>
+
+          <div class="card span-4">
+            <div class="row">
+              <h3>Department Occupancy</h3>
+              <div class="muted">% occupancy</div>
+            </div>
+            <canvas id="chartOccupancy"></canvas>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>Payer Mix</h3>
+              <div class="muted">Share of encounters</div>
+            </div>
+            <canvas id="chartPayer"></canvas>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>Auto Insights</h3>
+              <div class="muted">Rules-based highlights</div>
+            </div>
+            <table>
+              <thead>
+                <tr><th>Insight</th><th>Impact</th><th>Status</th></tr>
+              </thead>
+              <tbody id="insightsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- PATIENT FLOW -->
+      <section id="page-flow" class="page hidden">
+        <div class="grid">
+          <div class="card span-4">
+            <h3>OPD Wait Time (Median)</h3>
+            <div class="kpi" style="grid-column:unset; cursor:default;">
+              <div class="label"><span>Registration → Consult</span><span class="pill warn" id="opdWaitPill">SLA risk</span></div>
+              <div class="value" id="opdWaitValue">28 min</div>
+              <div class="delta" id="opdWaitDelta">+4 min vs last period</div>
+            </div>
+          </div>
+          <div class="card span-4">
+            <h3>ED Wait + LWBS</h3>
+            <div class="twoCol">
+              <div class="kpi" style="grid-column:unset; cursor:default;">
+                <div class="label"><span>ED median wait</span><span class="pill warn" id="edWaitPill">Watch</span></div>
+                <div class="value" id="edWaitValue">42 min</div>
+                <div class="delta" id="edWaitDelta">+6 min vs last period</div>
+              </div>
+              <div class="kpi" style="grid-column:unset; cursor:default;">
+                <div class="label"><span>LWBS</span><span class="pill bad" id="lwbsPill">High</span></div>
+                <div class="value" id="lwbsValue">3.8%</div>
+                <div class="delta" id="lwbsDelta">+0.6% vs last period</div>
+              </div>
+            </div>
+          </div>
+          <div class="card span-4">
+            <h3>Discharge Turnaround</h3>
+            <div class="kpi" style="grid-column:unset; cursor:default;">
+              <div class="label"><span>Doctor sign-off → Discharge</span><span class="pill good" id="dischargePill">Good</span></div>
+              <div class="value" id="dischargeValue">1h 12m</div>
+              <div class="delta" id="dischargeDelta">-8 min vs last period</div>
+            </div>
+          </div>
+
+          <div class="card span-8">
+            <div class="row">
+              <h3>Hourly Arrivals (OPD/ED)</h3>
+              <div class="muted">Peak hours & staffing alignment</div>
+            </div>
+            <canvas id="chartArrivals"></canvas>
+          </div>
+
+          <div class="card span-4">
+            <div class="row">
+              <h3>Journey Funnel</h3>
+              <div class="muted">Today snapshot</div>
+            </div>
+            <canvas id="chartFunnel"></canvas>
+          </div>
+
+          <div class="card span-12">
+            <div class="row">
+              <h3>Longest Waiting Queues</h3>
+              <div class="muted">Click department to drill down</div>
+            </div>
+            <table>
+              <thead><tr><th>Department</th><th>Waiting</th><th>Median Wait</th><th>Oldest Waiting Since</th></tr></thead>
+              <tbody id="queueTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLINICAL -->
+      <section id="page-clinical" class="page hidden">
+        <div class="grid">
+          <div class="card span-12">
+            <div class="row">
+              <h3>Quality & Outcomes</h3>
+              <div class="muted">Readmissions, HAI, lab/radiology turnaround</div>
+            </div>
+            <div class="kpis" style="padding:0;">
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Readmission (30d)</span><span class="pill warn" id="readmitPill">Watch</span></div>
+                <div class="value" id="readmitValue">7.4%</div>
+                <div class="delta" id="readmitDelta">+0.8% vs last period</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>HAI rate</span><span class="pill good" id="haiPill">Stable</span></div>
+                <div class="value" id="haiValue">1.9</div>
+                <div class="delta">per 1,000 patient days</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Lab TAT</span><span class="pill warn" id="labPill">SLA risk</span></div>
+                <div class="value" id="labValue">68 min</div>
+                <div class="delta" id="labDelta">+9 min vs last period</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Radiology TAT</span><span class="pill good" id="radPill">Good</span></div>
+                <div class="value" id="radValue">3h 10m</div>
+                <div class="delta" id="radDelta">-12 min vs last period</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>Lab TAT by Test</h3>
+              <div class="muted">Median minutes</div>
+            </div>
+            <canvas id="chartLabTat"></canvas>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>Readmissions Trend</h3>
+              <div class="muted">Weekly</div>
+            </div>
+            <canvas id="chartReadmit"></canvas>
+          </div>
+
+          <div class="card span-12">
+            <div class="row">
+              <h3>High-Risk Flags (Sample Rules)</h3>
+              <div class="muted">Clinical risk signals for review</div>
+            </div>
+            <table>
+              <thead><tr><th>Patient</th><th>Flag</th><th>Department</th><th>Reason</th><th>Suggested Action</th></tr></thead>
+              <tbody id="riskTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCTORS -->
+      <section id="page-doctors" class="page hidden">
+        <div class="grid">
+          <div class="card span-12">
+            <div class="row">
+              <h3>Doctor Scorecards</h3>
+              <div class="muted">Click a doctor to open their profile panel</div>
+            </div>
+            <table>
+              <thead><tr><th>Doctor</th><th>Specialty</th><th>OPD Visits</th><th>Conversion %</th><th>Avg Rating</th><th>Revenue (MTD)</th><th>Readmit %</th></tr></thead>
+              <tbody id="doctorTable"></tbody>
+            </table>
+          </div>
+
+          <div class="card span-12 hidden" id="doctorProfileCard">
+            <div class="row">
+              <div>
+                <h3 id="doctorName">Doctor Profile</h3>
+                <div class="muted" id="doctorMeta">—</div>
+              </div>
+              <div class="muted"><span class="link" id="closeDoctor">Close</span></div>
+            </div>
+            <div class="grid">
+              <div class="card span-6" style="box-shadow:none;">
+                <h3>OPD Visits Trend</h3>
+                <canvas id="chartDoctorVisits"></canvas>
+              </div>
+              <div class="card span-6" style="box-shadow:none;">
+                <h3>Funnel (OPD → Admission → Procedure)</h3>
+                <canvas id="chartDoctorFunnel"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHARMACY -->
+      <section id="page-pharmacy" class="page hidden">
+        <div class="grid">
+          <div class="card span-12">
+            <div class="row">
+              <h3>Inventory Health</h3>
+              <div class="muted">Stockouts, expiry risk, and suggested actions</div>
+            </div>
+            <div class="kpis" style="padding:0;">
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Stockouts (7d)</span><span class="pill bad" id="stockoutPill">High</span></div>
+                <div class="value" id="stockoutValue">6</div>
+                <div class="delta">Critical items affected</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Below Reorder</span><span class="pill warn">Watch</span></div>
+                <div class="value" id="belowReorderValue">18</div>
+                <div class="delta">Items need review</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Expiry Risk (30d)</span><span class="pill warn">Manage</span></div>
+                <div class="value" id="expiryValue">₹4.2L</div>
+                <div class="delta">Value at risk</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Inventory Turns</span><span class="pill good">Stable</span></div>
+                <div class="value" id="turnsValue">8.1</div>
+                <div class="delta">Annualized</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>Top Cost Items Consumed (MTD)</h3>
+              <div class="muted">₹ value</div>
+            </div>
+            <canvas id="chartTopItems"></canvas>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>Consumption by Department</h3>
+              <div class="muted">MTD share</div>
+            </div>
+            <canvas id="chartConsDept"></canvas>
+          </div>
+
+          <div class="card span-12">
+            <div class="row">
+              <h3>Action List</h3>
+              <div class="muted">Demo of operational recommendations</div>
+            </div>
+            <table>
+              <thead><tr><th>Item</th><th>On-hand</th><th>Reorder</th><th>Days of Stock</th><th>Expiry</th><th>Suggested Action</th></tr></thead>
+              <tbody id="inventoryTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINANCE -->
+      <section id="page-finance" class="page hidden">
+        <div class="grid">
+          <div class="card span-12">
+            <div class="row">
+              <h3>Revenue Cycle Management (RCM)</h3>
+              <div class="muted">Denials, AR aging, payer approval time</div>
+            </div>
+            <div class="kpis" style="padding:0;">
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Revenue (MTD)</span><span class="pill good">On track</span></div>
+                <div class="value" id="revValue">₹2.8Cr</div>
+                <div class="delta" id="revDelta">+6.1% vs last period</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>AR Days</span><span class="pill warn">Watch</span></div>
+                <div class="value" id="arValue">41</div>
+                <div class="delta">Target ≤ 35</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Denial Rate</span><span class="pill bad" id="denialPill">High</span></div>
+                <div class="value" id="denialValue">9.6%</div>
+                <div class="delta" id="denialDelta">+2.1% vs last period</div>
+              </div>
+              <div class="kpi" style="grid-column: span 3; cursor:default;">
+                <div class="label"><span>Collection Rate</span><span class="pill good">Good</span></div>
+                <div class="value" id="collectValue">92.4%</div>
+                <div class="delta">Rolling 30 days</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>Denials by Reason</h3>
+              <div class="muted">Count</div>
+            </div>
+            <canvas id="chartDenials"></canvas>
+          </div>
+
+          <div class="card span-6">
+            <div class="row">
+              <h3>AR Aging</h3>
+              <div class="muted">₹ outstanding</div>
+            </div>
+            <canvas id="chartAging"></canvas>
+          </div>
+
+          <div class="card span-12">
+            <div class="row">
+              <h3>Claims Worklist</h3>
+              <div class="muted">Click denial reason to filter (demo)</div>
+            </div>
+            <table>
+              <thead><tr><th>Claim ID</th><th>Payer</th><th>Amount</th><th>Status</th><th>Denial Reason</th><th>Next Action</th><th>SLA</th></tr></thead>
+              <tbody id="claimsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ALERTS -->
+      <section id="page-alerts" class="page hidden">
+        <div class="grid">
+          <div class="card span-12">
+            <div class="row">
+              <h3>Alerts & Actions</h3>
+              <div class="muted">Simple rules (MVP) + recommended owner/actions</div>
+            </div>
+            <table>
+              <thead><tr><th>Alert</th><th>Trigger</th><th>Impact</th><th>Owner</th><th>Suggested Action</th><th>Status</th></tr></thead>
+              <tbody id="alertsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // ----------------------------
+    // Synthetic demo data generator
+    // ----------------------------
+    const State = {
+      page: "home",
+      filters: { range: "7", department: "All", payer: "All" },
+      charts: {},
+      selectedDoctor: null,
+      claimReasonFilter: "All"
+    };
+
+    function rand(seed){
+      // deterministic-ish for same seed
+      let x = Math.sin(seed) * 10000;
+      return x - Math.floor(x);
+    }
+    function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
+
+    function rangeDays(){
+      const r = State.filters.range;
+      if (r === "today") return 1;
+      return parseInt(r, 10);
+    }
+    function labelDays(n){
+      // simple labels: D-6 ... D0
+      if (n === 1) return ["Today"];
+      const labels = [];
+      for (let i = n-1; i >= 0; i--) labels.push(`D-${i}`);
+      return labels;
+    }
+
+    function applyDepartmentFactor(base){
+      const d = State.filters.department;
+      const f = (d==="All")? 1 :
+        (d==="Emergency")? 1.12 :
+        (d==="ICU")? 1.08 :
+        (d==="Cardiology")? 1.05 :
+        (d==="Orthopedics")? 0.98 :
+        1.0;
+      return base * f;
+    }
+    function applyPayerFactor(base){
+      const p = State.filters.payer;
+      const f = (p==="All")? 1 :
+        (p==="Cash")? 0.95 :
+        (p==="Insurance")? 1.05 :
+        (p==="Corporate")? 1.02 :
+        (p==="Government")? 0.9 :
+        1.0;
+      return base * f;
+    }
+
+    function kpiStatus(value, thresholds){
+      // thresholds: {goodMax, warnMax} where lower is better OR {goodMin, warnMin} where higher is better
+      if ("goodMax" in thresholds){
+        if (value <= thresholds.goodMax) return "good";
+        if (value <= thresholds.warnMax) return "warn";
+        return "bad";
+      } else {
+        if (value >= thresholds.goodMin) return "good";
+        if (value >= thresholds.warnMin) return "warn";
+        return "bad";
+      }
+    }
+
+    // ----------------------------
+    // UI: navigation + filters
+    // ----------------------------
+    const pagesMeta = {
+      home: { title:"Home — Executive Cockpit", sub:"Hospital-wide KPIs with trends, drilldowns, and rule-based alerts." },
+      flow: { title:"Patient Flow — OPD/ER/IPD", sub:"Wait times, queues, arrivals, and discharge turnaround." },
+      clinical: { title:"Clinical Quality — Outcomes", sub:"Readmissions, infections, lab/radiology turnaround and risk flags." },
+      doctors: { title:"Doctor Scorecards", sub:"Doctor-level volume, conversion, outcomes and revenue." },
+      pharmacy: { title:"Pharmacy & Inventory", sub:"Stockouts, expiry risk, consumption and action list." },
+      finance: { title:"Finance (RCM)", sub:"Denials, AR aging and claims worklist." },
+      alerts: { title:"Alerts & Actions", sub:"Rule-based alerts with owners and suggested actions." }
+    };
+
+    function setPage(page){
+      State.page = page;
+      document.querySelectorAll(".nav button").forEach(b=>{
+        b.classList.toggle("active", b.dataset.page === page);
+      });
+      document.querySelectorAll(".page").forEach(sec=> sec.classList.add("hidden"));
+      document.getElementById(`page-${page}`).classList.remove("hidden");
+
+      document.getElementById("pageTitle").textContent = pagesMeta[page].title;
+      document.getElementById("pageSubtitle").textContent = pagesMeta[page].sub;
+
+      // Render page-specific content
+      renderAll();
+    }
+
+    document.getElementById("nav").addEventListener("click", (e)=>{
+      const btn = e.target.closest("button[data-page]");
+      if (!btn) return;
+      setPage(btn.dataset.page);
+    });
+
+    ["dateRange","department","payer"].forEach(id=>{
+      document.getElementById(id).addEventListener("change", ()=>{
+        State.filters.range = document.getElementById("dateRange").value;
+        State.filters.department = document.getElementById("department").value;
+        State.filters.payer = document.getElementById("payer").value;
+        State.claimReasonFilter = "All";
+        renderAll(true);
+      });
+    });
+
+    // ----------------------------
+    // KPI tiles
+    // ----------------------------
+    const kpiDefinitions = [
+      { key:"bedOcc", label:"Bed Occupancy", format:v=>`${v.toFixed(1)}%`, status:"higherBetter", thresholds:{goodMin:75, warnMin:60}, jump:"flow" },
+      { key:"icuOcc", label:"ICU Occupancy", format:v=>`${v.toFixed(1)}%`, status:"higherBetter", thresholds:{goodMin:70, warnMin:55}, jump:"clinical" },
+      { key:"alos", label:"Avg Length of Stay", format:v=>`${v.toFixed(1)} days`, status:"lowerBetter", thresholds:{goodMax:4.2, warnMax:5.2}, jump:"home" },
+      { key:"edWait", label:"ED Median Wait", format:v=>`${Math.round(v)} min`, status:"lowerBetter", thresholds:{goodMax:30, warnMax:45}, jump:"flow" },
+      { key:"opdVisits", label:"OPD Visits", format:v=>`${Math.round(v)}`, status:"higherBetter", thresholds:{goodMin:420, warnMin:320}, jump:"flow" },
+      { key:"admissions", label:"Admissions", format:v=>`${Math.round(v)}`, status:"higherBetter", thresholds:{goodMin:80, warnMin:55}, jump:"home" },
+      { key:"readmit", label:"Readmission (30d)", format:v=>`${v.toFixed(1)}%`, status:"lowerBetter", thresholds:{goodMax:6.5, warnMax:8.2}, jump:"clinical" },
+      { key:"hai", label:"HAI Rate", format:v=>`${v.toFixed(1)}`, status:"lowerBetter", thresholds:{goodMax:2.0, warnMax:2.6}, jump:"clinical" },
+      { key:"nps", label:"Patient Satisfaction (NPS)", format:v=>`${Math.round(v)}`, status:"higherBetter", thresholds:{goodMin:55, warnMin:45}, jump:"home" },
+      { key:"rev", label:"Revenue (MTD)", format:v=>`₹${(v/10000000).toFixed(2)}Cr`, status:"higherBetter", thresholds:{goodMin:2.4e7, warnMin:1.9e7}, jump:"finance" },
+      { key:"arDays", label:"AR Days", format:v=>`${Math.round(v)}`, status:"lowerBetter", thresholds:{goodMax:35, warnMax:45}, jump:"finance" },
+      { key:"denial", label:"Denial Rate", format:v=>`${v.toFixed(1)}%`, status:"lowerBetter", thresholds:{goodMax:6.8, warnMax:8.5}, jump:"finance" }
+    ];
+
+    function buildKpis(){
+      const host = document.getElementById("kpiGrid");
+      host.innerHTML = "";
+      kpiDefinitions.forEach((kpi, idx)=>{
+        const card = document.createElement("div");
+        card.className = "kpi";
+        card.dataset.jump = kpi.jump;
+        card.dataset.key = kpi.key;
+
+        const status = getKpiStatus(kpi.key, getKpis().values);
+        const pillClass = status;
+        const pillText = status==="good" ? "Good" : status==="warn" ? "Watch" : "High";
+
+        card.innerHTML = `
+          <div class="label">
+            <span>${kpi.label}</span>
+            <span class="pill ${pillClass}">${pillText}</span>
+          </div>
+          <div class="value" id="kpi-${kpi.key}">—</div>
+          <div class="delta" id="kpiD-${kpi.key}">Updated with filters</div>
+        `;
+
+        card.addEventListener("click", ()=>{
+          setPage(kpi.jump);
+        });
+
+        host.appendChild(card);
+      });
+    }
+
+    function getKpiStatus(key, values){
+      const def = kpiDefinitions.find(k=>k.key===key);
+      const val = values[key];
+      const thresholds = def.thresholds;
+
+      if (def.status === "lowerBetter"){
+        return kpiStatus(val, thresholds); // using goodMax/warnMax
+      }
+      // higherBetter
+      return kpiStatus(val, thresholds);
+    }
+
+    function getKpis(){
+      // Create plausible KPIs, affected by filters
+      const d = State.filters.department;
+      const days = rangeDays();
+      const seedBase = (days===1? 3.1 : days===7? 7.2 : 30.3) + d.length*0.11 + State.filters.payer.length*0.07;
+
+      const baseBedOcc = 78 + (rand(seedBase+1)*8 - 4);
+      const bedOcc = clamp(applyDepartmentFactor(baseBedOcc), 45, 95);
+
+      const baseIcuOcc = 82 + (rand(seedBase+2)*10 - 5);
+      const icuOcc = clamp((d==="ICU"? baseIcuOcc+4 : baseIcuOcc) * (d==="All"?1:0.98), 40, 98);
+
+      const baseAlos = 4.3 + (rand(seedBase+3)*0.9 - 0.35);
+      const alos = clamp(baseAlos + (d==="ICU"?0.5:0) + (d==="Orthopedics"?0.3:0), 2.8, 7.2);
+
+      const baseEdWait = 38 + (rand(seedBase+4)*18 - 8);
+      const edWait = clamp((d==="Emergency"||d==="All") ? baseEdWait : baseEdWait*0.85, 15, 85);
+
+      const baseOpd = 380 + (rand(seedBase+5)*120 - 45);
+      const opdVisits = clamp(applyDepartmentFactor(baseOpd), 150, 650);
+
+      const baseAdm = 68 + (rand(seedBase+6)*30 - 8);
+      const admissions = clamp(applyDepartmentFactor(baseAdm), 25, 120);
+
+      const baseReadmit = 7.2 + (rand(seedBase+7)*2.2 - 0.7);
+      const readmit = clamp(baseReadmit + (d==="Cardiology"?0.4:0) + (d==="ICU"?0.2:0), 3.2, 12.0);
+
+      const baseHai = 2.0 + (rand(seedBase+8)*1.0 - 0.25);
+      const hai = clamp(baseHai + (d==="ICU"?0.25:0), 0.8, 4.2);
+
+      const baseNps = 52 + (rand(seedBase+9)*12 - 6);
+      const nps = clamp(baseNps + (d==="Emergency"?-4:0), 25, 80);
+
+      const baseRev = 2.45e7 + (rand(seedBase+10)*1.1e7 - 4.0e6);
+      const rev = clamp(applyPayerFactor(baseRev), 1.2e7, 4.2e7);
+
+      const baseAr = 39 + (rand(seedBase+11)*18 - 6);
+      const arDays = clamp((State.filters.payer==="Government")? baseAr+6 : baseAr, 18, 75);
+
+      const baseDenial = 8.4 + (rand(seedBase+12)*3.2 - 1.1);
+      const denial = clamp((State.filters.payer==="Insurance")? baseDenial+0.8 : baseDenial, 3.0, 15.0);
+
+      // "delta" just for demo text
+      const deltas = {
+        bedOcc: (rand(seedBase+21)*4-2),
+        icuOcc: (rand(seedBase+22)*4-2),
+        alos: (rand(seedBase+23)*0.3-0.15),
+        edWait: (rand(seedBase+24)*10-5),
+        opdVisits: (rand(seedBase+25)*50-25),
+        admissions: (rand(seedBase+26)*10-5),
+        readmit: (rand(seedBase+27)*1.0-0.5),
+        hai: (rand(seedBase+28)*0.4-0.2),
+        nps: (rand(seedBase+29)*6-3),
+        rev: (rand(seedBase+30)*0.10-0.05), // %
+        arDays: (rand(seedBase+31)*6-3),
+        denial: (rand(seedBase+32)*1.6-0.8),
+      };
+
+      return {
+        values: { bedOcc, icuOcc, alos, edWait, opdVisits, admissions, readmit, hai, nps, rev, arDays, denial },
+        deltas
+      };
+    }
+
+    function renderKpis(){
+      const { values, deltas } = getKpis();
+      kpiDefinitions.forEach(def=>{
+        const valEl = document.getElementById(`kpi-${def.key}`);
+        const dEl = document.getElementById(`kpiD-${def.key}`);
+        if (!valEl || !dEl) return;
+
+        valEl.textContent = def.format(values[def.key]);
+
+        // delta display
+        const delta = deltas[def.key];
+        let deltaText = "vs last period";
+        if (def.key === "rev"){
+          const pct = (delta*100);
+          deltaText = `${pct>=0?"+":""}${pct.toFixed(1)}% vs last period`;
+        } else if (typeof delta === "number"){
+          const sign = delta >= 0 ? "+" : "";
+          deltaText = `${sign}${(Math.abs(delta) < 1 ? delta.toFixed(2) : delta.toFixed(1))} vs last period`;
+        }
+        dEl.textContent = deltaText;
+      });
+    }
+
+    // ----------------------------
+    // Charts helpers
+    // ----------------------------
+    function destroyChart(id){
+      if (State.charts[id]) {
+        State.charts[id].destroy();
+        delete State.charts[id];
+      }
+    }
+
+    function makeLineChart(canvasId, labels, series){
+      destroyChart(canvasId);
+      const ctx = document.getElementById(canvasId);
+      if (!ctx) return;
+      State.charts[canvasId] = new Chart(ctx, {
+        type: "line",
+        data: { labels, datasets: series },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { labels: { color: "#e8efff" } },
+            tooltip: { enabled: true }
+          },
+          scales: {
+            x: { ticks: { color: "#93a4c7" }, grid: { color: "rgba(255,255,255,.06)" } },
+            y: { ticks: { color: "#93a4c7" }, grid: { color: "rgba(255,255,255,.06)" } }
+          }
+        }
+      });
+    }
+
+    function makeBarChart(canvasId, labels, series){
+      destroyChart(canvasId);
+      const ctx = document.getElementById(canvasId);
+      if (!ctx) return;
+      State.charts[canvasId] = new Chart(ctx, {
+        type: "bar",
+        data: { labels, datasets: series },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { color: "#e8efff" } } },
+          scales: {
+            x: { ticks: { color: "#93a4c7" }, grid: { color: "rgba(255,255,255,.06)" } },
+            y: { ticks: { color: "#93a4c7" }, grid: { color: "rgba(255,255,255,.06)" } }
+          }
+        }
+      });
+    }
+
+    function makeDoughnut(canvasId, labels, values){
+      destroyChart(canvasId);
+      const ctx = document.getElementById(canvasId);
+      if (!ctx) return;
+      State.charts[canvasId] = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels,
+          datasets: [{ data: values }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "bottom", labels: { color: "#e8efff" } }
+          }
+        }
+      });
+    }
+
+    // ----------------------------
+    // HOME render
+    // ----------------------------
+    function renderHome(){
+      // charts depend on range
+      const days = rangeDays();
+      const labels = labelDays(days===1? 7 : days); // show 7 points even for today selection
+      document.getElementById("trendLabel1").textContent =
+        State.filters.range === "today" ? "Last 7 days (context)" : `Last ${State.filters.range} days`;
+
+      const seed = 100 + days*3 + State.filters.department.length*9 + State.filters.payer.length*7;
+
+      const admissions = labels.map((_,i)=>{
+        const base = applyDepartmentFactor(70 + (rand(seed+i)*18 - 6));
+        return Math.round(clamp(base, 25, 120));
+      });
+      const discharges = labels.map((_,i)=>{
+        const base = applyDepartmentFactor(62 + (rand(seed+50+i)*16 - 5));
+        return Math.round(clamp(base, 20, 110));
+      });
+
+      makeLineChart("chartAdmissions", labels, [
+        { label:"Admissions", data: admissions, tension:.35, borderWidth:2 },
+        { label:"Discharges", data: discharges, tension:.35, borderWidth:2 }
+      ]);
+
+      const occLabels = ["ICU","Ward A","Ward B","Maternity","Surgery"];
+      const occVals = occLabels.map((name, i)=>{
+        const base = 62 + (rand(seed+200+i)*28);
+        const v = (name==="ICU" ? base+10 : base);
+        return Math.round(clamp((State.filters.department==="All"? v : v*0.95), 40, 98));
+      });
+      makeBarChart("chartOccupancy", occLabels, [{ label:"Occupancy %", data: occVals, borderWidth:1 }]);
+
+      const payerLabels = ["Cash","Insurance","Corporate","Government"];
+      const payerVals = payerLabels.map((p,i)=>{
+        const base = 18 + rand(seed+300+i)*22;
+        return Math.round(base);
+      });
+      // Apply payer filter to visually change mix
+      if (State.filters.payer !== "All"){
+        const idx = payerLabels.indexOf(State.filters.payer);
+        payerVals[idx] = payerVals[idx] + 20;
+      }
+      makeDoughnut("chartPayer", payerLabels, payerVals);
+
+      // insights table
+      const { values } = getKpis();
+      const insights = [
+        {
+          text: `ICU occupancy at ${values.icuOcc.toFixed(1)}% (threshold 90%)`,
+          impact: "Capacity risk — consider step-down beds",
+          status: values.icuOcc > 90 ? "Open" : "Monitor"
+        },
+        {
+          text: `Denial rate at ${values.denial.toFixed(1)}%`,
+          impact: "Revenue leakage — prioritize top denial reasons",
+          status: values.denial > 8.5 ? "Open" : "Monitor"
+        },
+        {
+          text: `ED median wait ${Math.round(values.edWait)} min`,
+          impact: "Patient experience — align staffing with peak hours",
+          status: values.edWait > 45 ? "Open" : "Monitor"
+        },
+        {
+          text: `Expiry risk flagged in pharmacy (next 30 days)`,
+          impact: "Cost risk — rotate stock / return to vendor",
+          status: "Monitor"
+        }
+      ];
+      const tbody = document.getElementById("insightsTable");
+      tbody.innerHTML = "";
+      insights.forEach(x=>{
+        const tr = document.createElement("tr");
+        const pill = x.status==="Open" ? `<span class="pill bad">Open</span>` : `<span class="pill warn">Monitor</span>`;
+        tr.innerHTML = `<td>${x.text}</td><td>${x.impact}</td><td>${pill}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // ----------------------------
+    // FLOW render
+    // ----------------------------
+    function renderFlow(){
+      const seed = 700 + rangeDays()*11 + State.filters.department.length*13;
+      const opdWait = Math.round(clamp(applyDepartmentFactor(26 + rand(seed)*16 - 4), 12, 60));
+      document.getElementById("opdWaitValue").textContent = `${opdWait} min`;
+      document.getElementById("opdWaitDelta").textContent = `${opdWait>28?"+":"-"}${Math.abs(opdWait-28)} min vs last period`;
+      document.getElementById("opdWaitPill").className = `pill ${opdWait<=22?"good":opdWait<=32?"warn":"bad"}`;
+      document.getElementById("opdWaitPill").textContent = opdWait<=22?"Good":opdWait<=32?"Watch":"SLA risk";
+
+      const edWait = Math.round(clamp((State.filters.department==="Emergency"||State.filters.department==="All")
+        ? 34 + rand(seed+1)*22
+        : 28 + rand(seed+2)*16, 14, 90));
+      document.getElementById("edWaitValue").textContent = `${edWait} min`;
+      document.getElementById("edWaitDelta").textContent = `${edWait>38?"+":"-"}${Math.abs(edWait-38)} min vs last period`;
+      document.getElementById("edWaitPill").className = `pill ${edWait<=30?"good":edWait<=45?"warn":"bad"}`;
+      document.getElementById("edWaitPill").textContent = edWait<=30?"Good":edWait<=45?"Watch":"High";
+
+      const lwbs = clamp(2.8 + rand(seed+3)*2.8, 0.8, 6.2);
+      document.getElementById("lwbsValue").textContent = `${lwbs.toFixed(1)}%`;
+      document.getElementById("lwbsDelta").textContent = `${lwbs>3.2?"+":"-"}${Math.abs(lwbs-3.2).toFixed(1)}% vs last period`;
+      document.getElementById("lwbsPill").className = `pill ${lwbs<=2.4?"good":lwbs<=3.6?"warn":"bad"}`;
+      document.getElementById("lwbsPill").textContent = lwbs<=2.4?"Good":lwbs<=3.6?"Watch":"High";
+
+      const dischargeMin = Math.round(clamp(85 + rand(seed+4)*40 - 20, 40, 170));
+      const h = Math.floor(dischargeMin/60), m = dischargeMin%60;
+      document.getElementById("dischargeValue").textContent = `${h}h ${m}m`;
+      document.getElementById("dischargeDelta").textContent = `${dischargeMin>80?"+":"-"}${Math.abs(dischargeMin-80)} min vs last period`;
+      document.getElementById("dischargePill").className = `pill ${dischargeMin<=75?"good":dischargeMin<=105?"warn":"bad"}`;
+      document.getElementById("dischargePill").textContent = dischargeMin<=75?"Good":dischargeMin<=105?"Watch":"SLA risk";
+
+      // Hourly arrivals
+      const hours = Array.from({length:12}, (_,i)=> `${(8+i)}:00`);
+      const opd = hours.map((_,i)=> Math.round(clamp(18 + rand(seed+20+i)*25 + (i>3 && i<7 ? 10:0), 5, 70)));
+      const ed = hours.map((_,i)=> Math.round(clamp(6 + rand(seed+60+i)*10 + (i>4 && i<8 ? 3:0), 2, 28)));
+      makeLineChart("chartArrivals", hours, [
+        { label:"OPD arrivals", data: opd, tension:.35, borderWidth:2 },
+        { label:"ED arrivals", data: ed, tension:.35, borderWidth:2 }
+      ]);
+
+      // Funnel (as bar for simplicity)
+      const funnelLabels = ["Registered","Consulted","Lab Done","Pharmacy Done","Admitted"];
+      const base = 520 + rand(seed+90)*120;
+      const funnel = [
+        Math.round(base),
+        Math.round(base*0.86),
+        Math.round(base*0.58),
+        Math.round(base*0.52),
+        Math.round(base*0.12)
+      ];
+      makeBarChart("chartFunnel", funnelLabels, [{ label:"Patients", data: funnel }]);
+
+      const rows = [
+        { dep:"Emergency", w: Math.round(18+rand(seed+101)*18), mw: `${Math.round(32+rand(seed+102)*28)} min`, oldest:"09:14" },
+        { dep:"Cardiology", w: Math.round(10+rand(seed+103)*14), mw: `${Math.round(22+rand(seed+104)*22)} min`, oldest:"10:02" },
+        { dep:"Orthopedics", w: Math.round(8+rand(seed+105)*12), mw: `${Math.round(18+rand(seed+106)*18)} min`, oldest:"10:18" },
+        { dep:"General Medicine", w: Math.round(12+rand(seed+107)*16), mw: `${Math.round(20+rand(seed+108)*24)} min`, oldest:"09:46" }
+      ];
+      const qt = document.getElementById("queueTable");
+      qt.innerHTML = "";
+      rows.forEach(r=>{
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><span class="link" data-dep="${r.dep}">${r.dep}</span></td>
+          <td>${r.w}</td>
+          <td>${r.mw}</td>
+          <td>${r.oldest}</td>
+        `;
+        qt.appendChild(tr);
+      });
+
+      qt.querySelectorAll(".link[data-dep]").forEach(a=>{
+        a.addEventListener("click", ()=>{
+          document.getElementById("department").value = a.dataset.dep;
+          State.filters.department = a.dataset.dep;
+          renderAll(true);
+        });
+      });
+    }
+
+    // ----------------------------
+    // CLINICAL render
+    // ----------------------------
+    function renderClinical(){
+      const seed = 1200 + rangeDays()*17 + State.filters.department.length*5;
+
+      const readmit = clamp(6.8 + rand(seed+1)*3.2 - 0.8 + (State.filters.department==="Cardiology"?0.4:0), 3.2, 12.5);
+      document.getElementById("readmitValue").textContent = `${readmit.toFixed(1)}%`;
+      document.getElementById("readmitDelta").textContent = `${readmit>6.8?"+":"-"}${Math.abs(readmit-6.8).toFixed(1)}% vs last period`;
+      document.getElementById("readmitPill").className = `pill ${readmit<=6.5?"good":readmit<=8.2?"warn":"bad"}`;
+      document.getElementById("readmitPill").textContent = readmit<=6.5?"Good":readmit<=8.2?"Watch":"High";
+
+      const hai = clamp(1.8 + rand(seed+2)*1.2 - 0.2 + (State.filters.department==="ICU"?0.25:0), 0.9, 4.0);
+      document.getElementById("haiValue").textContent = `${hai.toFixed(1)}`;
+
+      const lab = Math.round(clamp(58 + rand(seed+3)*30 - 8 + (State.filters.department==="Emergency"?6:0), 25, 140));
+      document.getElementById("labValue").textContent = `${lab} min`;
+      document.getElementById("labDelta").textContent = `${lab>60?"+":"-"}${Math.abs(lab-60)} min vs last period`;
+      document.getElementById("labPill").className = `pill ${lab<=55?"good":lab<=70?"warn":"bad"}`;
+      document.getElementById("labPill").textContent = lab<=55?"Good":lab<=70?"Watch":"SLA risk";
+
+      const radMin = Math.round(clamp(180 + rand(seed+4)*80 - 30, 90, 360));
+      const rh = Math.floor(radMin/60), rm = radMin%60;
+      document.getElementById("radValue").textContent = `${rh}h ${rm}m`;
+
+      // Lab TAT by test (bar)
+      const tests = ["CBC","CRP","Troponin","LFT","KFT","D-Dimer"];
+      const tat = tests.map((t,i)=> Math.round(clamp(40 + rand(seed+20+i)*55 + (t==="Troponin"?12:0), 25, 130)));
+      makeBarChart("chartLabTat", tests, [{ label:"Median TAT (min)", data: tat }]);
+
+      // Readmission trend (line)
+      const weeks = ["W-5","W-4","W-3","W-2","W-1","W0"];
+      const trend = weeks.map((_,i)=> (clamp(6.2 + rand(seed+60+i)*2.6, 4.2, 10.5)).toFixed(1));
+      makeLineChart("chartReadmit", weeks, [{ label:"Readmission %", data: trend, tension:.35, borderWidth:2 }]);
+
+      // Risk table
+      const risks = [
+        { p:"P-10422", flag:"Sepsis risk", dep:"Emergency", reason:"High lactate + tachycardia", action:"Prioritize sepsis bundle within 1 hour" },
+        { p:"P-10891", flag:"Readmission risk", dep:"Cardiology", reason:"HF history + multiple admissions", action:"Schedule follow-up within 72 hours" },
+        { p:"P-11017", flag:"Infection control", dep:"ICU", reason:"Central line > 7 days", action:"Review line necessity / aseptic checklist" },
+        { p:"P-10365", flag:"Medication safety", dep:"General Medicine", reason:"High-risk medication double-check pending", action:"Pharmacy verification + nurse countersign" }
+      ];
+      const rt = document.getElementById("riskTable");
+      rt.innerHTML = "";
+      risks.forEach(r=>{
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${r.p}</td><td>${r.flag}</td><td>${r.dep}</td><td>${r.reason}</td><td>${r.action}</td>`;
+        rt.appendChild(tr);
+      });
+    }
+
+    // ----------------------------
+    // DOCTORS render
+    // ----------------------------
+    const doctors = [
+      { name:"Dr. Ananya Rao", spec:"Cardiology" },
+      { name:"Dr. Vikram Iyer", spec:"Orthopedics" },
+      { name:"Dr. Meera Nair", spec:"General Medicine" },
+      { name:"Dr. Rohit Sharma", spec:"Emergency" },
+      { name:"Dr. Sana Khan", spec:"Pulmonology" },
+      { name:"Dr. K. Srinivas", spec:"Neurology" }
+    ];
+
+    function renderDoctors(){
+      const seed = 1600 + rangeDays()*19 + State.filters.department.length*3;
+
+      const tbody = document.getElementById("doctorTable");
+      tbody.innerHTML = "";
+      doctors.forEach((d, i)=>{
+        const visits = Math.round(clamp(120 + rand(seed+i)*120, 40, 280));
+        const conv = clamp(8 + rand(seed+30+i)*22, 4, 38);
+        const rating = clamp(3.8 + rand(seed+60+i)*0.9, 3.4, 4.9);
+        const rev = clamp(18 + rand(seed+90+i)*28, 8, 55); // lakh
+        const readmit = clamp(5.4 + rand(seed+120+i)*4.0, 2.8, 11.8);
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><span class="link" data-doctor="${i}">${d.name}</span></td>
+          <td>${d.spec}</td>
+          <td>${visits}</td>
+          <td>${conv.toFixed(1)}%</td>
+          <td>${rating.toFixed(1)}</td>
+          <td>₹${rev.toFixed(1)}L</td>
+          <td>${readmit.toFixed(1)}%</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      tbody.querySelectorAll(".link[data-doctor]").forEach(a=>{
+        a.addEventListener("click", ()=>{
+          State.selectedDoctor = parseInt(a.dataset.doctor,10);
+          openDoctorProfile();
+        });
+      });
+
+      document.getElementById("closeDoctor").onclick = ()=>{
+        State.selectedDoctor = null;
+        document.getElementById("doctorProfileCard").classList.add("hidden");
+      };
+    }
+
+    function openDoctorProfile(){
+      const i = State.selectedDoctor;
+      if (i === null || i === undefined) return;
+
+      const d = doctors[i];
+      const card = document.getElementById("doctorProfileCard");
+      card.classList.remove("hidden");
+      document.getElementById("doctorName").textContent = d.name;
+      document.getElementById("doctorMeta").textContent = `${d.spec} • Demo profile`;
+
+      const seed = 1900 + i*17 + rangeDays()*11;
+      const labels = ["W-5","W-4","W-3","W-2","W-1","W0"];
+      const visits = labels.map((_,k)=> Math.round(clamp(18 + rand(seed+k)*24 + (k===5?6:0), 8, 60)));
+      makeLineChart("chartDoctorVisits", labels, [{ label:"OPD visits", data: visits, tension:.35, borderWidth:2 }]);
+
+      const funnelLabels = ["OPD","Admissions","Procedures"];
+      const opd = Math.round(clamp(210 + rand(seed+40)*90, 120, 320));
+      const adm = Math.round(opd * clamp(0.12 + rand(seed+41)*0.12, 0.08, 0.28));
+      const proc = Math.round(adm * clamp(0.35 + rand(seed+42)*0.25, 0.25, 0.7));
+      makeBarChart("chartDoctorFunnel", funnelLabels, [{ label:"Patients", data:[opd,adm,proc] }]);
+    }
+
+    // ----------------------------
+    // PHARMACY render
+    // ----------------------------
+    function renderPharmacy(){
+      const seed = 2100 + rangeDays()*13 + State.filters.department.length*8;
+
+      const stockouts = Math.round(clamp(4 + rand(seed)*6, 0, 14));
+      document.getElementById("stockoutValue").textContent = `${stockouts}`;
+      document.getElementById("stockoutPill").className = `pill ${stockouts<=2?"good":stockouts<=6?"warn":"bad"}`;
+      document.getElementById("stockoutPill").textContent = stockouts<=2?"Good":stockouts<=6?"Watch":"High";
+
+      document.getElementById("belowReorderValue").textContent = `${Math.round(clamp(12 + rand(seed+1)*14, 3, 40))}`;
+      document.getElementById("expiryValue").textContent = `₹${clamp(2.6 + rand(seed+2)*3.8, 0.8, 8.5).toFixed(1)}L`;
+      document.getElementById("turnsValue").textContent = `${clamp(6.5 + rand(seed+3)*3.2, 4.0, 12.0).toFixed(1)}`;
+
+      // Top items
+      const items = ["Antibiotics","Cardiac Stents","IV Fluids","Sutures","Insulin","Contrast Media"];
+      const cost = items.map((_,i)=> Math.round(clamp(8 + rand(seed+30+i)*22, 2, 40))); // lakh
+      makeBarChart("chartTopItems", items, [{ label:"₹ Lakh (MTD)", data: cost }]);
+
+      // Consumption by dept
+      const deps = ["ICU","OT","Ward","Emergency","OPD"];
+      const share = deps.map((_,i)=> Math.round(clamp(10 + rand(seed+80+i)*22, 6, 40)));
+      makeDoughnut("chartConsDept", deps, share);
+
+      // Action list
+      const inv = [
+        { item:"Ceftriaxone 1g", on: 120, ro: 200, days: 4, exp:"2026-01-12", action:"Create PO (Vendor A)"},
+        { item:"IV Cannula 20G", on: 380, ro: 500, days: 6, exp:"2027-09-01", action:"Transfer stock from Ward B"},
+        { item:"Insulin (Regular)", on: 40, ro: 80, days: 3, exp:"2026-02-08", action:"Create PO (Urgent)"},
+        { item:"Surgical Sutures 2-0", on: 210, ro: 180, days: 10, exp:"2026-01-03", action:"Rotate stock / prioritize usage"},
+        { item:"Contrast Media 50ml", on: 55, ro: 120, days: 5, exp:"2026-01-28", action:"Create PO + review radiology schedule"},
+        { item:"Paracetamol 500mg", on: 2200, ro: 1500, days: 22, exp:"2026-03-20", action:"No action"}
+      ];
+      const tb = document.getElementById("inventoryTable");
+      tb.innerHTML = "";
+      inv.forEach(r=>{
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${r.item}</td><td>${r.on}</td><td>${r.ro}</td><td>${r.days}</td><td>${r.exp}</td><td>${r.action}</td>`;
+        tb.appendChild(tr);
+      });
+    }
+
+    // ----------------------------
+    // FINANCE render
+    // ----------------------------
+    function renderFinance(){
+      const seed = 2500 + rangeDays()*7 + State.filters.payer.length*9;
+
+      const denReasons = ["Missing Docs","Coding","Eligibility","Late Submission","Medical Necessity"];
+      const denCounts = denReasons.map((_,i)=> Math.round(clamp(14 + rand(seed+i)*30, 6, 60)));
+      makeBarChart("chartDenials", denReasons, [{ label:"Denials (count)", data: denCounts }]);
+
+      const agingLabels = ["0-30","31-60","61-90","90+"];
+      const aging = agingLabels.map((_,i)=> Math.round(clamp(22 + rand(seed+40+i)*42, 10, 90))); // lakh
+      makeBarChart("chartAging", agingLabels, [{ label:"₹ Lakh Outstanding", data: aging }]);
+
+      // Claims worklist
+      const claims = [];
+      const payers = ["Insurance","Corporate","Government","Cash"];
+      const statuses = ["Submitted","Denied","In Review","Approved"];
+      for (let i=0;i<14;i++){
+        const payer = payers[Math.floor(rand(seed+100+i)*payers.length)];
+        const amount = Math.round(clamp(18000 + rand(seed+200+i)*220000, 8000, 420000));
+        const status = statuses[Math.floor(rand(seed+300+i)*statuses.length)];
+        const reason = denReasons[Math.floor(rand(seed+400+i)*denReasons.length)];
+        claims.push({
+          id: `CLM-${12040+i}`,
+          payer,
+          amount,
+          status,
+          reason: status==="Denied" ? reason : "—",
+          next: status==="Denied" ? "Resubmit with checklist" : status==="Submitted" ? "Await payer response" : "Follow-up",
+          sla: status==="Denied" ? (rand(seed+500+i)>0.55 ? "Breach" : "On track") : "On track"
+        });
+      }
+
+      const tbody = document.getElementById("claimsTable");
+      tbody.innerHTML = "";
+
+      const filtered = claims.filter(c=>{
+        if (State.claimReasonFilter==="All") return true;
+        return c.reason === State.claimReasonFilter;
+      });
+
+      filtered.forEach(c=>{
+        const tr = document.createElement("tr");
+        const reasonCell = c.reason==="—"
+          ? "—"
+          : `<span class="link" data-reason="${c.reason}">${c.reason}</span>`;
+        const slaPill = c.sla==="Breach"
+          ? `<span class="pill bad">Breach</span>`
+          : `<span class="pill good">On track</span>`;
+
+        tr.innerHTML = `
+          <td>${c.id}</td>
+          <td>${c.payer}</td>
+          <td>₹${c.amount.toLocaleString("en-IN")}</td>
+          <td>${c.status}</td>
+          <td>${reasonCell}</td>
+          <td>${c.next}</td>
+          <td>${slaPill}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      tbody.querySelectorAll(".link[data-reason]").forEach(a=>{
+        a.addEventListener("click", ()=>{
+          State.claimReasonFilter = a.dataset.reason;
+          renderFinance(); // rerender table only
+        });
+      });
+
+      // also update finance KPI tiles (already set in HTML; keep simple)
+      const { values } = getKpis();
+      document.getElementById("denialValue").textContent = `${values.denial.toFixed(1)}%`;
+      document.getElementById("denialPill").className = `pill ${values.denial<=6.8?"good":values.denial<=8.5?"warn":"bad"}`;
+      document.getElementById("denialPill").textContent = values.denial<=6.8?"Good":values.denial<=8.5?"Watch":"High";
+    }
+
+    // ----------------------------
+    // ALERTS render
+    // ----------------------------
+    function renderAlerts(){
+      const { values } = getKpis();
+      const alerts = [
+        { alert:"ICU occupancy high", trigger:`ICU > 90% (now ${values.icuOcc.toFixed(1)}%)`, impact:"Capacity risk", owner:"Nursing Supervisor", action:"Rebalance beds / expedite discharge", status: values.icuOcc>90 ? "Open" : "Monitor" },
+        { alert:"ED wait time breach", trigger:`ED median > 45 min (now ${Math.round(values.edWait)} min)`, impact:"Patient experience", owner:"ED In-charge", action:"Add triage staff during peak", status: values.edWait>45 ? "Open" : "Monitor" },
+        { alert:"Denial rate spike", trigger:`Denials > 8.5% (now ${values.denial.toFixed(1)}%)`, impact:"Revenue leakage", owner:"RCM Lead", action:"Fix top denial reasons + documentation checklist", status: values.denial>8.5 ? "Open" : "Monitor" },
+        { alert:"Expiry risk (30 days)", trigger:"Items expiring soon", impact:"Cost risk", owner:"Pharmacy Manager", action:"Rotate stock / return to vendor", status:"Monitor" }
+      ];
+
+      const tb = document.getElementById("alertsTable");
+      tb.innerHTML = "";
+      alerts.forEach(a=>{
+        const pill = a.status==="Open" ? `<span class="pill bad">Open</span>` : `<span class="pill warn">Monitor</span>`;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${a.alert}</td><td>${a.trigger}</td><td>${a.impact}</td><td>${a.owner}</td><td>${a.action}</td><td>${pill}</td>`;
+        tb.appendChild(tr);
+      });
+    }
+
+    // ----------------------------
+    // Render controller
+    // ----------------------------
+    function renderAll(rebuildCharts=false){
+      // Always ensure KPI grid exists on home
+      if (!document.getElementById("kpiGrid").children.length) buildKpis();
+      renderKpis();
+
+      // Render only current page (but we can safely render others if needed)
+      if (State.page === "home") renderHome();
+      if (State.page === "flow") renderFlow();
+      if (State.page === "clinical") renderClinical();
+      if (State.page === "doctors") { renderDoctors(); if (State.selectedDoctor !== null) openDoctorProfile(); }
+      if (State.page === "pharmacy") renderPharmacy();
+      if (State.page === "finance") renderFinance();
+      if (State.page === "alerts") renderAlerts();
+    }
+
+    // Init
+    buildKpis();
+    setPage("home");
+  </script>
+</body>
+</html>
