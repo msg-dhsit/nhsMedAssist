@@ -1,0 +1,1001 @@
+Age,Gender,Weight,Height,Ethnicity,Smoking,Drinking,Activities,Family History,Ongoing Medications,Systolic BP,Diastolic BP,Heart Rate,BMI,Result_BP
+74,Male,103.9,191.2,Asian,Yes,No,Moderate,Yes,Lisinopril,108,75,70,28.4,Normal
+43,Female,119.9,191.1,Mixed,Yes,No,Low,No,Atorvastatin,176,87,69,32.8,High
+38,Male,63.4,190.6,Black,Yes,No,Low,Yes,Lisinopril,116,88,94,17.5,High
+49,Male,50.1,158.6,Other,Yes,Yes,Active,Yes,No Medication,110,97,69,19.9,Hypertension
+86,Female,59.9,150.4,Mixed,Yes,No,Low,Yes,Lisinopril,179,66,83,26.5,Hypertension
+82,Female,85.2,153.6,Asian,Yes,No,Active,No,Metformin,166,74,73,36.1,Hypertension
+46,Male,108.8,195.5,Asian,No,No,Moderate,Yes,No Medication,156,89,62,28.5,High
+69,Male,65.8,172.4,Asian,No,Yes,Active,No,Lisinopril,167,85,74,22.1,High
+56,Male,102.5,158.5,Other,Yes,Yes,Active,Yes,Atorvastatin,137,93,87,40.8,High
+83,Female,114.6,175.0,Mixed,Yes,No,Active,No,Metformin,91,117,81,37.4,Hypertension
+24,Female,69.4,158.7,Mixed,Yes,Yes,Active,No,No Medication,95,106,65,27.6,Hypertension
+23,Female,50.5,190.2,Mixed,No,No,Active,No,Lisinopril,119,92,65,14.0,Hypertension
+58,Male,112.7,171.4,Asian,No,No,Low,Yes,Atorvastatin,118,113,60,38.4,Hypertension
+66,Male,51.1,181.7,Other,Yes,No,Low,Yes,Lisinopril,118,87,86,15.5,High
+49,Male,96.7,191.4,Black,No,Yes,Moderate,Yes,No Medication,170,108,71,26.4,Hypertension
+18,Female,57.7,151.2,Mixed,Yes,No,Active,Yes,Metformin,96,67,93,25.2,Normal
+69,Female,73.6,154.3,Black,Yes,Yes,Moderate,Yes,Aspirin,173,92,63,30.9,Hypertension
+40,Male,82.2,152.0,Black,No,Yes,Low,Yes,Lisinopril,127,60,96,35.6,High
+41,Male,117.9,169.6,Other,Yes,Yes,Active,No,No Medication,166,104,66,41.0,Hypertension
+85,Female,95.8,164.8,Asian,No,No,Moderate,Yes,Lisinopril,154,65,70,35.3,Hypertension
+29,Male,97.3,155.0,Black,No,Yes,Low,Yes,No Medication,128,97,85,40.5,High
+85,Female,102.1,178.7,Asian,Yes,No,Low,No,Lisinopril,91,111,70,32.0,Hypertension
+62,Female,119.2,176.1,Mixed,Yes,Yes,Active,Yes,Metformin,127,91,67,38.4,High
+76,Male,78.0,199.9,Mixed,No,Yes,Moderate,No,Lisinopril,174,78,85,19.5,Hypertension
+87,Female,87.9,189.3,Black,Yes,Yes,Active,Yes,Metformin,141,70,64,24.5,Hypertension
+73,Male,107.6,190.9,White,Yes,No,Active,Yes,Metformin,154,75,88,29.5,Hypertension
+22,Female,64.9,164.1,Black,No,No,Moderate,No,Atorvastatin,109,108,71,24.1,Hypertension
+37,Female,104.4,196.8,Other,No,No,Moderate,No,No Medication,124,63,85,27.0,High
+48,Male,85.0,168.1,Asian,No,No,Moderate,No,Metformin,173,63,91,30.1,Hypertension
+73,Female,110.0,194.5,Mixed,No,Yes,Active,No,Aspirin,180,87,90,29.1,High
+78,Female,83.0,171.1,Other,Yes,Yes,Moderate,No,Atorvastatin,116,110,71,28.4,Hypertension
+73,Male,107.2,161.9,Asian,Yes,Yes,Low,No,Lisinopril,137,100,65,40.9,High
+87,Male,74.1,175.9,Mixed,Yes,No,Active,Yes,Lisinopril,98,112,83,23.9,Hypertension
+84,Female,115.4,161.1,Mixed,Yes,No,Active,Yes,Aspirin,99,112,90,44.5,Hypertension
+20,Female,54.9,194.6,Other,No,No,Active,No,Lisinopril,112,99,72,14.5,Hypertension
+49,Female,84.6,188.7,Black,Yes,No,Low,Yes,Lisinopril,170,97,70,23.8,Hypertension
+25,Male,61.5,170.8,Mixed,Yes,No,Active,Yes,Lisinopril,128,107,69,21.1,High
+36,Female,81.7,197.3,Asian,No,No,Active,No,Atorvastatin,156,89,92,21.0,High
+19,Female,105.5,174.9,White,No,No,Active,No,No Medication,162,78,92,34.5,Hypertension
+27,Male,85.5,189.6,Mixed,Yes,Yes,Low,Yes,Lisinopril,179,105,66,23.8,Hypertension
+33,Female,85.6,172.5,Mixed,Yes,No,Active,Yes,Metformin,164,68,63,28.8,Hypertension
+75,Female,68.1,182.2,Black,Yes,No,Low,No,No Medication,108,92,65,20.5,Hypertension
+54,Male,76.4,193.5,Black,No,No,Low,No,Lisinopril,177,66,94,20.4,Hypertension
+27,Male,91.5,157.2,Asian,No,Yes,Moderate,No,Metformin,107,118,96,37.0,Hypertension
+87,Female,76.0,186.8,White,No,No,Low,No,Atorvastatin,163,107,82,21.8,Hypertension
+58,Male,113.6,170.2,Mixed,No,Yes,Low,No,Lisinopril,107,69,60,39.2,Normal
+68,Male,90.7,154.7,Black,No,No,Moderate,Yes,Metformin,141,96,74,37.9,Hypertension
+27,Male,96.7,184.4,Asian,Yes,Yes,Low,Yes,Aspirin,125,112,85,28.4,High
+73,Female,114.4,172.1,Black,Yes,Yes,Active,No,Atorvastatin,91,100,73,38.6,Hypertension
+46,Female,51.5,176.0,White,Yes,Yes,Low,Yes,Aspirin,160,75,97,16.6,Hypertension
+63,Male,70.9,167.6,Other,No,Yes,Moderate,No,Atorvastatin,122,105,78,25.2,High
+60,Female,80.7,198.2,Black,Yes,No,Low,Yes,No Medication,101,90,83,20.5,Hypertension
+35,Male,86.2,180.6,Other,Yes,No,Low,No,Aspirin,142,103,70,26.4,Hypertension
+31,Male,58.5,172.4,Other,No,No,Moderate,Yes,No Medication,163,105,65,19.7,Hypertension
+68,Male,90.0,158.2,Black,Yes,Yes,Low,Yes,Lisinopril,133,73,84,36.0,High
+85,Female,50.4,183.4,Mixed,No,No,Moderate,Yes,Lisinopril,145,78,79,15.0,Hypertension
+36,Male,62.7,159.7,Other,Yes,Yes,Moderate,No,No Medication,94,105,68,24.6,Hypertension
+26,Male,101.9,185.4,Mixed,No,No,Moderate,No,Atorvastatin,92,67,86,29.6,Normal
+52,Female,105.5,182.7,Asian,Yes,No,Moderate,No,Aspirin,130,100,100,31.6,High
+80,Female,70.9,150.4,Black,Yes,No,Low,Yes,Lisinopril,159,118,69,31.3,Hypertension
+74,Male,71.7,191.9,Black,No,Yes,Low,Yes,Atorvastatin,111,98,97,19.5,Hypertension
+58,Female,101.5,159.2,White,Yes,Yes,Moderate,No,Aspirin,114,119,72,40.0,Hypertension
+77,Male,57.9,178.8,Black,No,Yes,Active,No,Metformin,171,62,64,18.1,Hypertension
+28,Female,88.6,173.5,Other,Yes,No,Moderate,No,Aspirin,131,74,70,29.4,High
+55,Male,89.4,192.1,Other,Yes,No,Low,No,No Medication,134,94,73,24.2,High
+62,Female,72.0,157.4,Mixed,No,Yes,Moderate,Yes,Lisinopril,174,100,70,29.1,Hypertension
+44,Male,80.8,153.8,Black,Yes,Yes,Low,Yes,No Medication,151,96,90,34.2,Hypertension
+77,Female,78.8,152.7,Mixed,Yes,Yes,Active,Yes,Metformin,153,109,85,33.8,Hypertension
+67,Female,57.3,186.5,White,Yes,Yes,Active,Yes,Atorvastatin,139,119,100,16.5,High
+39,Male,58.0,171.1,Asian,Yes,Yes,Active,No,Metformin,96,105,87,19.8,Hypertension
+54,Male,92.3,150.0,Asian,Yes,No,Low,No,Lisinopril,129,112,84,41.0,High
+70,Female,101.3,151.1,Mixed,No,Yes,Low,No,Metformin,110,111,69,44.4,Hypertension
+58,Male,101.3,189.0,Black,Yes,Yes,Active,Yes,Lisinopril,175,118,65,28.4,Hypertension
+37,Male,118.3,188.3,Black,Yes,No,Active,Yes,Aspirin,175,93,82,33.4,Hypertension
+36,Female,103.1,192.2,Black,No,No,Active,Yes,Atorvastatin,107,86,71,27.9,High
+39,Male,52.0,162.1,Other,No,No,Moderate,Yes,Lisinopril,172,102,81,19.8,Hypertension
+60,Female,84.6,185.6,Black,No,No,Moderate,No,Atorvastatin,109,67,93,24.6,Normal
+66,Male,106.8,160.6,Black,No,Yes,Moderate,No,Metformin,163,83,99,41.4,High
+26,Female,69.9,155.5,White,Yes,Yes,Low,No,Atorvastatin,109,60,77,28.9,Normal
+23,Male,72.2,199.6,Asian,Yes,No,Low,No,Metformin,113,94,77,18.1,Hypertension
+45,Female,69.0,186.5,Other,No,No,Active,Yes,Lisinopril,149,120,64,19.8,Hypertension
+53,Female,98.3,179.6,Other,Yes,No,Low,No,Metformin,109,104,65,30.5,Hypertension
+32,Male,89.3,165.0,Black,No,No,Moderate,Yes,Metformin,100,74,90,32.8,Normal
+83,Male,94.9,198.9,Asian,No,No,Active,Yes,No Medication,126,82,60,24.0,High
+34,Female,92.8,184.6,Mixed,Yes,Yes,Low,Yes,Atorvastatin,113,61,63,27.2,Normal
+66,Female,73.3,188.4,Black,No,No,Moderate,Yes,No Medication,92,108,82,20.7,Hypertension
+37,Male,117.2,190.5,Mixed,No,No,Active,No,Atorvastatin,125,86,83,32.3,High
+79,Female,61.6,162.3,White,No,Yes,Moderate,No,Lisinopril,150,63,78,23.4,Hypertension
+48,Female,88.7,196.3,White,Yes,Yes,Low,Yes,Atorvastatin,178,92,87,23.0,Hypertension
+87,Male,87.9,166.3,White,No,No,Moderate,No,Aspirin,125,63,63,31.8,High
+48,Male,62.8,163.4,Asian,No,No,Moderate,No,Aspirin,110,83,67,23.5,High
+25,Female,62.8,187.2,White,Yes,No,Active,Yes,Atorvastatin,126,81,85,17.9,High
+23,Male,62.8,166.2,Mixed,Yes,No,Moderate,Yes,Aspirin,157,67,62,22.7,Hypertension
+50,Male,68.9,195.4,Mixed,No,No,Low,Yes,No Medication,143,104,76,18.0,Hypertension
+67,Female,75.0,168.4,Other,No,Yes,Active,Yes,No Medication,152,87,91,26.4,High
+73,Female,89.9,193.9,Mixed,No,No,Low,No,Metformin,145,60,96,23.9,Hypertension
+70,Female,74.8,180.5,Other,Yes,Yes,Low,Yes,Atorvastatin,115,115,89,23.0,Hypertension
+66,Male,119.1,185.6,Mixed,Yes,Yes,Active,Yes,Lisinopril,138,112,80,34.6,High
+33,Female,84.2,166.7,Other,Yes,Yes,Low,No,Aspirin,94,77,88,30.3,Normal
+78,Female,118.3,165.7,Mixed,No,Yes,Low,Yes,No Medication,133,109,67,43.1,High
+53,Male,60.4,171.0,Asian,Yes,No,Moderate,Yes,Metformin,105,96,60,20.7,Hypertension
+68,Female,61.9,160.9,White,Yes,No,Moderate,No,Metformin,102,60,69,23.9,Normal
+84,Female,80.0,181.0,Asian,No,No,Low,Yes,Atorvastatin,169,74,82,24.4,Hypertension
+57,Female,82.1,162.0,Asian,Yes,No,Low,Yes,Atorvastatin,156,67,91,31.3,Hypertension
+67,Male,59.9,168.6,Asian,Yes,Yes,Low,No,Aspirin,111,66,65,21.1,Normal
+87,Male,81.4,171.0,Asian,Yes,Yes,Active,Yes,Aspirin,176,81,81,27.8,High
+79,Male,90.7,195.9,White,Yes,No,Moderate,Yes,Metformin,128,119,98,23.6,High
+60,Female,84.9,188.1,Other,No,No,Moderate,Yes,Aspirin,152,64,82,24.0,Hypertension
+41,Female,114.5,194.0,Mixed,Yes,Yes,Active,Yes,Atorvastatin,104,102,77,30.4,Hypertension
+55,Female,60.3,192.9,Black,Yes,Yes,Low,No,Metformin,104,71,73,16.2,Normal
+36,Female,116.4,183.8,Asian,Yes,No,Active,Yes,Aspirin,113,87,85,34.5,High
+75,Male,51.2,177.8,Asian,No,Yes,Low,Yes,No Medication,170,64,88,16.2,Hypertension
+79,Male,88.8,150.5,White,Yes,No,Low,Yes,Atorvastatin,156,96,99,39.2,Hypertension
+74,Female,51.5,162.2,Black,No,Yes,Low,Yes,Metformin,129,65,89,19.6,High
+67,Female,88.9,153.2,Asian,Yes,Yes,Active,No,No Medication,115,104,74,37.9,Hypertension
+41,Female,101.5,180.4,Black,No,Yes,Active,Yes,No Medication,124,90,92,31.2,High
+54,Female,115.8,166.8,Asian,Yes,No,Active,Yes,Metformin,151,74,82,41.6,Hypertension
+22,Female,109.2,150.7,Mixed,No,Yes,Moderate,Yes,Atorvastatin,167,100,97,48.1,Hypertension
+28,Female,68.3,194.4,White,Yes,No,Low,No,Atorvastatin,160,105,62,18.1,Hypertension
+45,Male,94.6,158.8,White,No,No,Low,Yes,Atorvastatin,119,60,61,37.5,Normal
+55,Female,104.6,173.5,Asian,No,Yes,Active,Yes,Atorvastatin,120,76,89,34.7,High
+49,Female,99.2,166.4,Mixed,Yes,No,Active,Yes,Lisinopril,127,74,96,35.8,High
+59,Male,54.3,168.5,White,Yes,No,Low,No,Atorvastatin,101,102,79,19.1,Hypertension
+58,Male,110.6,168.7,White,Yes,Yes,Low,No,Metformin,135,120,86,38.9,High
+51,Female,92.7,176.0,Black,No,Yes,Active,No,No Medication,174,67,99,29.9,Hypertension
+20,Female,112.3,155.7,Mixed,No,No,Low,Yes,Lisinopril,139,107,87,46.3,High
+24,Female,55.1,194.9,White,No,Yes,Active,Yes,Lisinopril,161,110,79,14.5,Hypertension
+20,Female,101.1,154.3,Mixed,Yes,Yes,Low,Yes,Aspirin,151,84,96,42.5,High
+64,Male,64.7,172.2,Asian,Yes,Yes,Active,Yes,No Medication,172,98,61,21.8,Hypertension
+37,Female,61.7,156.3,White,No,No,Active,No,Atorvastatin,169,117,92,25.3,Hypertension
+83,Male,74.3,171.2,Mixed,No,Yes,Active,Yes,Lisinopril,161,94,79,25.4,Hypertension
+22,Female,85.2,170.1,Black,Yes,No,Active,No,No Medication,131,113,69,29.4,High
+29,Female,77.6,171.3,Black,No,Yes,Active,Yes,Metformin,129,70,75,26.4,High
+21,Male,90.2,172.7,Asian,No,Yes,Active,No,Atorvastatin,130,64,80,30.2,High
+41,Male,59.6,152.2,Other,Yes,Yes,Low,No,Atorvastatin,150,85,79,25.7,High
+90,Female,100.9,187.0,White,No,Yes,Moderate,No,Metformin,156,115,87,28.9,Hypertension
+33,Female,118.1,170.2,White,Yes,Yes,Moderate,No,Lisinopril,99,89,66,40.8,High
+66,Male,92.0,168.2,Black,Yes,Yes,Moderate,Yes,No Medication,134,62,78,32.5,High
+49,Female,67.6,182.3,Asian,No,No,Active,No,Metformin,118,117,71,20.3,Hypertension
+29,Male,98.7,176.4,Other,No,Yes,Active,Yes,Aspirin,178,91,66,31.7,Hypertension
+43,Male,53.8,166.2,Mixed,Yes,Yes,Active,No,Metformin,113,97,95,19.5,Hypertension
+35,Female,61.0,164.7,Asian,No,No,Moderate,No,Atorvastatin,114,114,61,22.5,Hypertension
+77,Male,68.4,198.6,Black,Yes,No,Active,No,Metformin,155,105,68,17.3,Hypertension
+87,Male,92.3,180.3,Asian,Yes,Yes,Active,Yes,Aspirin,92,101,67,28.4,Hypertension
+60,Male,112.7,158.5,Black,Yes,Yes,Low,Yes,Aspirin,113,97,98,44.9,Hypertension
+41,Male,82.9,187.6,White,Yes,No,Low,Yes,Aspirin,178,116,74,23.6,Hypertension
+37,Female,81.5,160.7,Other,Yes,Yes,Low,Yes,Metformin,158,115,89,31.6,Hypertension
+44,Male,72.5,189.7,Asian,Yes,No,Active,Yes,Lisinopril,166,103,72,20.1,Hypertension
+60,Male,86.7,167.6,Mixed,Yes,No,Low,Yes,No Medication,134,77,63,30.9,High
+45,Female,113.8,154.2,Asian,Yes,Yes,Active,No,No Medication,150,72,90,47.9,Hypertension
+52,Female,92.7,154.4,White,No,No,Active,Yes,No Medication,133,112,94,38.9,High
+86,Male,116.6,183.4,Mixed,Yes,Yes,Active,Yes,Lisinopril,140,115,92,34.7,Hypertension
+46,Female,58.8,197.7,Mixed,No,Yes,Moderate,No,No Medication,109,115,73,15.0,Hypertension
+84,Male,69.9,152.5,White,No,No,Low,No,Metformin,175,66,67,30.1,Hypertension
+67,Male,74.3,152.9,White,No,No,Low,Yes,Lisinopril,116,103,60,31.8,Hypertension
+80,Female,63.4,185.4,Other,Yes,No,Low,Yes,Atorvastatin,103,86,89,18.4,High
+27,Female,86.6,155.1,Black,No,Yes,Active,No,Metformin,97,105,65,36.0,Hypertension
+23,Male,88.1,170.9,Mixed,Yes,No,Moderate,No,No Medication,125,88,69,30.2,High
+81,Female,72.4,198.3,Black,Yes,Yes,Active,No,No Medication,110,109,94,18.4,Hypertension
+60,Male,105.3,150.8,Black,Yes,No,Active,No,Lisinopril,170,107,82,46.3,Hypertension
+81,Male,109.9,180.3,Black,Yes,Yes,Moderate,Yes,Lisinopril,136,109,61,33.8,High
+61,Male,98.6,162.6,Other,Yes,No,Low,Yes,Lisinopril,116,75,94,37.3,Normal
+26,Female,73.7,164.6,White,Yes,No,Moderate,No,Aspirin,163,114,63,27.2,Hypertension
+78,Male,70.4,160.9,White,Yes,No,Low,Yes,Aspirin,97,80,69,27.2,High
+82,Female,67.0,198.4,White,Yes,No,Low,Yes,Aspirin,172,113,75,17.0,Hypertension
+51,Female,85.3,177.8,Other,Yes,No,Active,Yes,Metformin,92,101,82,27.0,Hypertension
+42,Female,55.0,175.4,Asian,No,Yes,Moderate,Yes,Metformin,101,104,92,17.9,Hypertension
+19,Male,71.1,185.8,Asian,No,No,Moderate,No,Metformin,143,91,67,20.6,Hypertension
+56,Female,76.5,169.0,Asian,Yes,Yes,Moderate,Yes,Lisinopril,156,85,64,26.8,High
+39,Male,108.7,186.4,Asian,No,Yes,Low,Yes,Atorvastatin,171,62,86,31.3,Hypertension
+25,Male,106.9,169.7,White,No,Yes,Low,No,Aspirin,163,89,62,37.1,High
+53,Female,54.1,195.9,Mixed,No,No,Low,No,No Medication,116,77,79,14.1,Normal
+42,Male,106.0,173.2,Asian,No,Yes,Low,No,Lisinopril,135,111,76,35.3,High
+38,Male,84.5,158.8,Mixed,Yes,No,Low,Yes,Atorvastatin,174,76,66,33.5,Hypertension
+30,Female,76.6,178.8,Other,Yes,Yes,Active,Yes,No Medication,151,67,86,24.0,Hypertension
+63,Female,113.1,175.7,White,Yes,No,Active,No,Atorvastatin,154,89,74,36.6,High
+58,Male,65.7,191.5,Black,No,Yes,Low,No,Metformin,163,83,75,17.9,High
+83,Male,54.3,185.1,White,Yes,No,Active,Yes,Metformin,172,62,68,15.8,Hypertension
+34,Female,72.7,170.9,White,Yes,Yes,Moderate,Yes,Atorvastatin,105,66,78,24.9,Normal
+85,Female,75.2,176.8,Black,No,No,Low,No,No Medication,106,109,89,24.1,Hypertension
+18,Female,111.2,157.6,Mixed,No,No,Active,Yes,No Medication,97,82,66,44.8,High
+66,Male,54.6,185.8,Black,Yes,Yes,Active,No,Aspirin,96,82,86,15.8,High
+85,Female,115.8,170.3,White,No,No,Low,Yes,Metformin,173,73,64,39.9,Hypertension
+44,Female,71.7,182.4,Mixed,No,No,Active,No,No Medication,101,80,73,21.6,High
+84,Male,101.6,159.2,Mixed,No,No,Moderate,No,No Medication,141,110,91,40.1,Hypertension
+64,Female,89.4,156.3,Other,Yes,Yes,Active,No,Aspirin,134,62,97,36.6,High
+58,Male,57.0,190.7,Other,Yes,No,Low,Yes,No Medication,165,81,62,15.7,High
+73,Female,103.9,194.0,Other,Yes,No,Moderate,No,Atorvastatin,106,109,84,27.6,Hypertension
+80,Male,82.0,163.4,Other,Yes,No,Moderate,No,Metformin,164,113,74,30.7,Hypertension
+69,Female,106.0,175.4,White,Yes,No,Low,No,Lisinopril,145,109,79,34.5,Hypertension
+75,Male,80.5,157.7,Black,No,Yes,Active,No,Metformin,146,112,82,32.4,Hypertension
+86,Female,105.2,162.2,White,No,Yes,Low,No,Lisinopril,173,71,83,40.0,Hypertension
+36,Male,111.7,182.4,Other,No,Yes,Active,Yes,Metformin,128,77,80,33.6,High
+22,Female,93.1,169.2,Black,No,No,Low,Yes,Aspirin,91,90,100,32.5,Hypertension
+84,Female,90.3,156.0,Mixed,No,No,Low,No,No Medication,119,67,94,37.1,Normal
+73,Female,100.9,163.9,White,Yes,No,Low,Yes,Atorvastatin,106,109,81,37.6,Hypertension
+50,Male,83.2,157.0,White,Yes,No,Moderate,Yes,Atorvastatin,96,69,79,33.8,Normal
+74,Male,78.3,178.1,Other,Yes,Yes,Moderate,Yes,No Medication,140,85,75,24.7,High
+49,Female,83.6,182.0,Mixed,No,Yes,Active,Yes,Aspirin,112,116,81,25.2,Hypertension
+73,Female,77.7,158.6,Other,No,Yes,Low,No,Metformin,95,74,95,30.9,Normal
+41,Female,95.9,180.4,White,Yes,Yes,Low,No,Lisinopril,133,82,74,29.5,High
+24,Female,108.0,157.4,Mixed,Yes,Yes,Moderate,Yes,Lisinopril,143,91,72,43.6,Hypertension
+43,Female,108.3,196.6,Other,Yes,No,Moderate,Yes,Aspirin,143,105,97,28.0,Hypertension
+65,Male,59.3,163.5,Mixed,Yes,No,Active,No,Atorvastatin,118,72,93,22.2,Normal
+73,Male,115.4,153.5,Black,No,No,Low,Yes,No Medication,147,81,86,49.0,High
+84,Male,106.7,169.4,Mixed,No,No,Active,Yes,Aspirin,118,68,66,37.2,Normal
+87,Female,112.8,197.8,Asian,Yes,Yes,Low,Yes,Lisinopril,115,83,98,28.8,High
+35,Female,74.0,169.9,White,No,Yes,Active,No,No Medication,128,114,77,25.6,High
+76,Male,59.5,153.1,Asian,Yes,No,Moderate,Yes,Atorvastatin,90,98,88,25.4,Hypertension
+69,Male,52.6,161.9,Asian,Yes,No,Active,No,Aspirin,174,101,95,20.1,Hypertension
+71,Female,105.7,157.5,Other,No,No,Low,Yes,Lisinopril,96,62,88,42.6,Normal
+32,Female,80.8,197.1,Other,Yes,Yes,Low,Yes,No Medication,160,97,84,20.8,Hypertension
+75,Female,82.3,175.3,White,No,No,Active,Yes,Aspirin,124,113,72,26.8,High
+83,Male,80.4,172.6,Other,Yes,No,Moderate,Yes,Lisinopril,95,81,90,27.0,High
+73,Female,118.1,176.2,Other,Yes,No,Moderate,No,Aspirin,129,108,72,38.0,High
+70,Male,53.8,171.8,Black,No,Yes,Low,No,No Medication,129,89,81,18.2,High
+43,Male,55.5,196.0,Mixed,No,Yes,Moderate,Yes,Aspirin,111,64,60,14.4,Normal
+33,Female,90.8,169.7,Other,Yes,Yes,Active,Yes,Atorvastatin,177,68,92,31.5,Hypertension
+70,Female,100.4,161.0,Black,No,No,Active,Yes,Lisinopril,166,97,98,38.7,Hypertension
+71,Female,80.9,195.1,Asian,No,No,Active,Yes,Metformin,155,102,90,21.3,Hypertension
+87,Male,117.2,154.7,Asian,Yes,Yes,Moderate,Yes,Atorvastatin,111,104,90,49.0,Hypertension
+82,Female,76.5,154.0,Asian,No,Yes,Active,No,No Medication,95,116,64,32.3,Hypertension
+66,Male,55.1,166.7,Black,No,Yes,Moderate,Yes,Atorvastatin,108,84,63,19.8,High
+79,Female,99.6,195.9,Other,Yes,Yes,Low,No,No Medication,114,79,62,26.0,Normal
+38,Female,71.3,194.6,White,Yes,Yes,Moderate,No,Atorvastatin,110,97,92,18.8,Hypertension
+63,Male,82.2,154.9,White,Yes,No,Moderate,No,Metformin,109,69,67,34.3,Normal
+38,Female,92.6,165.7,Mixed,No,No,Moderate,No,No Medication,100,102,84,33.7,Hypertension
+41,Male,98.7,187.5,White,No,Yes,Active,No,No Medication,160,108,81,28.1,Hypertension
+62,Female,102.8,192.5,White,No,No,Moderate,Yes,Aspirin,105,84,94,27.7,High
+34,Male,70.7,193.9,White,Yes,Yes,Low,Yes,Lisinopril,125,115,89,18.8,High
+50,Female,69.3,181.7,Mixed,Yes,Yes,Active,Yes,Aspirin,126,64,78,21.0,High
+49,Female,110.8,177.9,Black,Yes,Yes,Active,No,Aspirin,137,111,86,35.0,High
+33,Male,115.3,192.5,White,Yes,Yes,Low,No,No Medication,117,68,65,31.1,Normal
+61,Female,85.7,175.3,Mixed,No,Yes,Moderate,No,Aspirin,136,114,95,27.9,High
+67,Female,117.7,155.8,Other,No,Yes,Active,Yes,Lisinopril,97,69,92,48.5,Normal
+55,Female,61.8,195.5,Mixed,No,Yes,Active,No,Atorvastatin,127,94,82,16.2,High
+74,Female,97.8,186.8,Other,No,Yes,Low,Yes,Atorvastatin,128,69,63,28.0,High
+42,Female,63.1,173.8,Asian,Yes,No,Moderate,Yes,Atorvastatin,166,67,87,20.9,Hypertension
+38,Male,100.3,169.7,White,Yes,No,Moderate,Yes,Aspirin,104,106,79,34.8,Hypertension
+28,Male,52.9,188.1,Mixed,No,No,Low,No,Lisinopril,134,108,92,15.0,High
+27,Male,73.3,187.9,Asian,No,Yes,Moderate,No,No Medication,119,110,60,20.8,Hypertension
+50,Female,98.0,178.6,Other,Yes,Yes,Moderate,Yes,No Medication,116,86,63,30.7,High
+81,Male,76.5,174.4,Mixed,Yes,No,Low,Yes,Lisinopril,125,77,99,25.2,High
+27,Male,62.4,183.3,Other,Yes,Yes,Active,No,Metformin,94,78,63,18.6,Normal
+62,Female,88.4,164.7,Black,No,Yes,Active,Yes,No Medication,100,68,67,32.6,Normal
+81,Female,83.4,194.2,White,Yes,Yes,Low,Yes,No Medication,115,93,77,22.1,Hypertension
+47,Female,54.3,154.4,Asian,Yes,No,Low,No,Aspirin,133,76,83,22.8,High
+67,Male,78.2,194.4,Mixed,No,No,Moderate,No,No Medication,101,87,100,20.7,High
+50,Male,63.5,174.1,White,No,No,Active,No,Lisinopril,94,89,76,20.9,High
+45,Female,109.5,152.7,Other,No,No,Moderate,No,Lisinopril,164,77,60,47.0,Hypertension
+58,Male,64.9,167.6,Black,No,Yes,Moderate,No,Metformin,178,119,63,23.1,Hypertension
+63,Female,97.3,183.2,White,No,No,Moderate,No,Atorvastatin,141,67,62,29.0,Hypertension
+42,Male,107.4,165.7,Black,Yes,No,Active,Yes,Aspirin,152,101,73,39.1,Hypertension
+88,Male,57.0,199.0,Other,No,No,Low,No,Atorvastatin,92,99,71,14.4,Hypertension
+58,Male,53.0,194.9,Mixed,No,No,Low,No,No Medication,133,98,76,14.0,High
+52,Male,112.1,186.8,White,No,Yes,Low,Yes,Atorvastatin,115,80,65,32.1,High
+66,Male,99.2,163.6,Mixed,No,Yes,Moderate,Yes,Lisinopril,172,86,64,37.1,High
+88,Male,116.0,188.6,Mixed,Yes,No,Low,No,Metformin,144,92,89,32.6,Hypertension
+53,Male,78.6,153.9,Asian,Yes,No,Moderate,Yes,Metformin,117,87,80,33.2,High
+19,Female,119.5,190.4,Other,Yes,Yes,Moderate,Yes,Aspirin,165,103,73,33.0,Hypertension
+75,Male,102.5,186.5,Asian,Yes,Yes,Low,No,Atorvastatin,163,108,96,29.5,Hypertension
+50,Male,72.1,169.6,White,Yes,Yes,Low,Yes,Aspirin,165,118,87,25.1,Hypertension
+30,Male,87.8,181.4,Black,Yes,No,Active,Yes,Metformin,143,70,83,26.7,Hypertension
+40,Male,75.6,196.6,Other,Yes,Yes,Low,Yes,Aspirin,126,66,60,19.6,High
+88,Female,96.0,156.2,Black,No,Yes,Low,No,Lisinopril,136,72,78,39.3,High
+67,Male,71.5,154.9,Other,Yes,Yes,Low,Yes,Atorvastatin,116,64,87,29.8,Normal
+73,Female,104.2,167.9,Other,Yes,Yes,Active,No,Atorvastatin,125,69,63,37.0,High
+46,Female,98.3,156.8,Mixed,No,Yes,Active,Yes,Lisinopril,112,109,75,40.0,Hypertension
+84,Male,97.9,159.0,Black,Yes,Yes,Moderate,No,No Medication,177,64,74,38.7,Hypertension
+24,Female,79.1,150.9,Other,Yes,Yes,Active,Yes,Atorvastatin,177,80,98,34.7,High
+80,Male,61.8,178.7,Mixed,Yes,No,Low,No,Metformin,100,95,96,19.4,Hypertension
+38,Female,66.4,162.1,Black,Yes,No,Active,Yes,Aspirin,152,95,100,25.3,Hypertension
+19,Female,113.5,155.1,Black,Yes,No,Active,Yes,Lisinopril,150,90,88,47.2,Hypertension
+45,Male,115.8,153.8,White,Yes,No,Moderate,Yes,Aspirin,106,105,63,49.0,Hypertension
+54,Female,119.9,173.5,White,Yes,Yes,Low,Yes,Atorvastatin,170,79,99,39.8,Hypertension
+73,Male,111.8,183.1,Black,No,Yes,Active,Yes,Aspirin,90,76,77,33.3,Normal
+48,Female,53.7,189.8,Black,No,No,Active,No,Metformin,150,104,77,14.9,Hypertension
+20,Female,95.6,194.3,Black,Yes,No,Moderate,No,Lisinopril,101,85,70,25.3,High
+25,Female,78.7,151.0,Asian,Yes,No,Moderate,Yes,Aspirin,162,97,69,34.5,Hypertension
+71,Female,84.7,159.0,White,Yes,Yes,Active,No,No Medication,92,120,77,33.5,Hypertension
+82,Male,87.2,150.1,Other,No,No,Active,Yes,Aspirin,127,86,69,38.7,High
+22,Female,99.4,167.4,Asian,No,Yes,Moderate,Yes,Metformin,130,108,83,35.5,High
+38,Male,113.4,159.8,Asian,No,No,Active,No,Aspirin,117,65,76,44.4,Normal
+43,Male,79.0,193.2,Black,Yes,No,Moderate,No,Lisinopril,150,62,88,21.2,Hypertension
+62,Female,100.8,160.2,Other,No,No,Active,Yes,Aspirin,159,119,72,39.3,Hypertension
+53,Female,60.6,155.3,Mixed,No,Yes,Moderate,No,No Medication,126,111,100,25.1,High
+62,Female,119.7,178.3,Asian,No,No,Moderate,Yes,Lisinopril,139,99,96,37.7,High
+63,Male,66.8,175.0,Asian,No,Yes,Low,Yes,Aspirin,147,102,63,21.8,Hypertension
+58,Female,91.5,152.0,Black,No,No,Active,Yes,Lisinopril,90,69,90,39.6,Normal
+76,Female,92.9,174.2,White,Yes,No,Low,No,Atorvastatin,134,101,79,30.6,High
+39,Female,90.8,184.3,Asian,Yes,No,Low,No,No Medication,145,96,79,26.7,Hypertension
+29,Male,95.2,163.6,Other,Yes,Yes,Low,Yes,Atorvastatin,164,90,89,35.6,Hypertension
+84,Male,90.4,184.3,Black,Yes,Yes,Active,No,Metformin,170,99,78,26.6,Hypertension
+85,Male,85.0,164.4,Black,No,No,Moderate,Yes,Lisinopril,160,63,72,31.4,Hypertension
+67,Female,99.0,159.8,Mixed,Yes,Yes,Low,No,No Medication,107,95,67,38.8,Hypertension
+61,Female,103.5,193.5,Asian,Yes,No,Active,No,Lisinopril,95,102,75,27.6,Hypertension
+90,Male,58.5,182.3,White,Yes,Yes,Low,Yes,Aspirin,165,92,76,17.6,Hypertension
+22,Female,83.0,171.7,White,No,No,Low,Yes,No Medication,104,85,77,28.2,High
+40,Female,108.0,191.8,White,Yes,Yes,Low,No,Atorvastatin,132,73,65,29.4,High
+62,Female,67.6,183.8,White,Yes,Yes,Active,No,No Medication,106,99,77,20.0,Hypertension
+50,Female,67.3,155.9,White,Yes,Yes,Moderate,Yes,Lisinopril,135,98,91,27.7,High
+44,Female,103.7,192.8,Mixed,Yes,No,Moderate,No,Atorvastatin,174,76,76,27.9,Hypertension
+30,Female,88.5,179.0,Mixed,Yes,Yes,Moderate,No,Metformin,169,98,91,27.6,Hypertension
+72,Female,115.1,168.7,Other,No,No,Active,No,No Medication,99,68,85,40.4,Normal
+66,Female,80.0,187.7,Mixed,Yes,Yes,Low,No,Lisinopril,162,105,96,22.7,Hypertension
+42,Female,81.4,168.9,Asian,No,Yes,Moderate,Yes,Aspirin,111,77,92,28.5,Normal
+27,Female,81.9,194.7,Other,Yes,No,Active,Yes,No Medication,176,102,72,21.6,Hypertension
+30,Male,84.6,174.2,Other,No,Yes,Low,Yes,Lisinopril,136,115,85,27.9,High
+52,Male,90.5,181.1,Other,Yes,No,Active,Yes,No Medication,111,99,82,27.6,Hypertension
+59,Male,95.2,170.5,White,No,Yes,Moderate,Yes,Aspirin,92,85,68,32.7,High
+75,Male,53.8,199.7,Other,No,No,Moderate,No,Aspirin,137,78,100,13.5,High
+64,Male,112.1,159.7,White,Yes,No,Active,No,No Medication,150,62,75,44.0,Hypertension
+49,Female,97.7,188.1,White,No,Yes,Moderate,Yes,Lisinopril,151,117,77,27.6,Hypertension
+28,Male,92.4,196.3,Mixed,Yes,No,Low,Yes,Aspirin,173,63,99,24.0,Hypertension
+33,Male,117.5,150.3,Asian,Yes,Yes,Active,Yes,Lisinopril,93,116,93,52.0,Hypertension
+28,Female,119.0,151.6,Other,Yes,Yes,Active,No,Atorvastatin,170,85,97,51.8,High
+32,Male,98.6,151.5,Asian,Yes,Yes,Active,Yes,Metformin,120,87,60,43.0,High
+40,Female,100.6,191.1,White,No,No,Moderate,No,Lisinopril,162,85,79,27.5,High
+80,Male,108.6,189.9,Mixed,No,No,Moderate,Yes,No Medication,128,69,71,30.1,High
+23,Female,68.5,188.7,White,Yes,Yes,Low,No,Metformin,132,107,86,19.2,High
+50,Female,84.5,152.8,Asian,No,Yes,Active,Yes,Metformin,146,67,86,36.2,Hypertension
+89,Male,97.0,195.0,Asian,Yes,Yes,Active,No,Metformin,137,108,100,25.5,High
+42,Male,54.1,170.5,Other,No,Yes,Moderate,No,Aspirin,109,84,94,18.6,High
+56,Male,81.2,193.2,Black,No,No,Low,Yes,Metformin,154,87,65,21.8,High
+67,Female,96.3,180.4,Other,No,No,Active,No,Atorvastatin,120,92,88,29.6,High
+53,Female,117.5,193.6,Other,No,No,Active,No,Aspirin,178,63,96,31.3,Hypertension
+23,Male,86.3,166.7,Mixed,No,Yes,Active,Yes,Metformin,130,114,73,31.1,High
+71,Male,89.6,167.1,Black,No,Yes,Active,Yes,Lisinopril,115,118,80,32.1,Hypertension
+34,Female,93.5,171.9,Mixed,No,Yes,Moderate,No,Atorvastatin,157,95,63,31.6,Hypertension
+83,Male,59.8,177.9,Other,Yes,Yes,Active,No,Metformin,171,81,92,18.9,High
+74,Female,88.6,197.6,Black,Yes,Yes,Low,Yes,Aspirin,90,91,93,22.7,Hypertension
+57,Male,107.2,191.0,Black,Yes,Yes,Low,Yes,Lisinopril,141,66,84,29.4,Hypertension
+31,Male,108.1,161.0,Asian,No,Yes,Moderate,Yes,Aspirin,118,67,92,41.7,Normal
+81,Male,54.8,190.6,Black,No,No,Active,No,Aspirin,145,99,95,15.1,Hypertension
+82,Male,97.8,158.7,Other,No,Yes,Moderate,Yes,No Medication,99,83,80,38.8,High
+80,Male,72.4,196.8,Other,Yes,Yes,Low,No,Aspirin,176,114,75,18.7,Hypertension
+43,Male,62.5,161.9,Black,Yes,Yes,Low,Yes,Aspirin,110,75,92,23.8,Normal
+77,Female,79.2,180.6,Black,No,No,Low,Yes,Atorvastatin,120,93,70,24.3,High
+90,Female,72.4,154.4,Mixed,No,Yes,Active,Yes,Aspirin,141,78,61,30.4,Hypertension
+87,Female,101.3,152.3,Other,No,Yes,Moderate,Yes,Aspirin,172,90,78,43.7,Hypertension
+57,Male,100.3,199.5,Asian,No,Yes,Low,Yes,Metformin,115,92,100,25.2,Hypertension
+44,Male,67.4,177.8,Other,No,Yes,Active,Yes,Aspirin,103,93,64,21.3,Hypertension
+43,Male,85.6,187.8,Mixed,No,Yes,Moderate,Yes,Metformin,113,70,67,24.3,Normal
+65,Male,69.7,187.1,Mixed,No,Yes,Low,No,Metformin,137,65,64,19.9,High
+47,Male,82.4,186.7,Mixed,No,Yes,Active,No,Aspirin,165,102,93,23.6,Hypertension
+66,Male,90.8,180.2,Black,No,No,Low,No,Atorvastatin,145,103,83,28.0,Hypertension
+26,Female,65.1,192.6,Black,No,Yes,Active,Yes,No Medication,160,69,66,17.5,Hypertension
+62,Female,90.7,171.0,Mixed,No,No,Low,Yes,Metformin,109,94,73,31.0,Hypertension
+76,Female,97.2,167.1,White,No,Yes,Active,No,Aspirin,179,98,85,34.8,Hypertension
+32,Male,118.3,171.0,Black,No,Yes,Low,Yes,Metformin,169,69,90,40.5,Hypertension
+48,Female,53.4,189.1,White,No,No,Low,Yes,Aspirin,170,108,88,14.9,Hypertension
+19,Male,100.6,190.7,Other,No,No,Active,Yes,Metformin,97,104,62,27.7,Hypertension
+76,Male,84.0,176.9,White,No,No,Active,Yes,Lisinopril,110,105,100,26.8,Hypertension
+81,Female,76.9,184.1,Black,No,Yes,Moderate,No,Lisinopril,101,63,80,22.7,Normal
+57,Male,115.9,197.7,Other,Yes,No,Active,No,Metformin,154,116,62,29.7,Hypertension
+28,Male,83.6,194.3,Black,Yes,No,Low,Yes,Atorvastatin,170,110,71,22.1,Hypertension
+62,Male,115.2,171.8,Other,No,Yes,Moderate,No,Aspirin,133,60,98,39.0,High
+30,Male,113.4,196.9,White,Yes,Yes,Active,Yes,No Medication,168,63,87,29.2,Hypertension
+81,Female,101.8,172.0,Mixed,Yes,Yes,Low,No,Metformin,134,90,92,34.4,High
+23,Female,68.8,152.8,Other,No,No,Active,Yes,Lisinopril,110,84,90,29.5,High
+31,Male,83.0,192.5,Black,No,No,Moderate,No,No Medication,111,70,79,22.4,Normal
+67,Female,97.0,180.3,Asian,Yes,Yes,Low,No,Aspirin,132,77,78,29.8,High
+90,Male,84.0,153.2,Other,Yes,No,Moderate,Yes,Atorvastatin,177,75,95,35.8,Hypertension
+82,Male,65.2,164.3,Black,No,No,Low,Yes,Atorvastatin,166,69,77,24.2,Hypertension
+41,Male,86.9,178.4,Asian,No,Yes,Moderate,Yes,Atorvastatin,106,86,91,27.3,High
+66,Female,55.5,164.6,Other,Yes,No,Moderate,Yes,Aspirin,156,99,84,20.5,Hypertension
+57,Female,90.9,176.0,Other,No,Yes,Moderate,Yes,Metformin,132,90,69,29.3,High
+22,Female,106.0,152.2,Asian,No,Yes,Active,No,No Medication,110,69,83,45.8,Normal
+86,Female,84.9,160.2,Mixed,No,No,Moderate,No,Atorvastatin,151,104,71,33.1,Hypertension
+18,Female,88.7,163.3,White,Yes,No,Low,No,No Medication,135,90,84,33.3,High
+31,Female,79.0,188.6,Black,Yes,Yes,Low,No,Metformin,102,88,92,22.2,High
+25,Male,116.6,195.5,Asian,Yes,No,Moderate,Yes,Aspirin,95,65,72,30.5,Normal
+28,Male,101.0,168.4,Mixed,Yes,No,Active,Yes,Metformin,162,99,80,35.6,Hypertension
+47,Female,76.6,160.0,Other,No,No,Low,No,Atorvastatin,139,66,70,29.9,High
+79,Male,87.1,151.5,Other,Yes,No,Moderate,No,Aspirin,147,62,83,37.9,Hypertension
+22,Female,110.9,195.9,Other,No,No,Moderate,No,No Medication,128,108,79,28.9,High
+84,Female,53.7,169.9,Other,Yes,No,Moderate,No,Aspirin,126,60,74,18.6,High
+25,Female,95.5,164.5,White,Yes,No,Moderate,Yes,Lisinopril,160,116,91,35.3,Hypertension
+86,Female,83.8,165.5,Black,No,Yes,Low,No,Metformin,106,110,95,30.6,Hypertension
+53,Male,114.5,159.0,White,No,Yes,Low,No,Atorvastatin,155,65,79,45.3,Hypertension
+30,Male,60.9,173.4,Mixed,Yes,No,Low,Yes,Atorvastatin,155,84,81,20.3,High
+56,Male,101.0,193.6,White,No,No,Active,Yes,Lisinopril,170,87,73,26.9,High
+90,Female,78.8,153.4,Other,Yes,No,Moderate,No,No Medication,149,96,85,33.5,Hypertension
+33,Male,98.5,191.4,Other,Yes,Yes,Moderate,Yes,Metformin,157,88,73,26.9,High
+66,Female,77.3,175.4,Mixed,Yes,No,Active,No,Aspirin,152,87,73,25.1,High
+63,Male,76.0,177.0,Mixed,Yes,No,Moderate,Yes,No Medication,128,88,87,24.3,High
+19,Male,89.2,190.5,Asian,No,Yes,Active,No,Aspirin,123,91,71,24.6,High
+64,Female,79.0,166.8,Mixed,No,No,Moderate,No,Aspirin,157,84,95,28.4,High
+58,Male,92.2,164.7,Black,No,Yes,Active,Yes,Atorvastatin,174,119,100,34.0,Hypertension
+65,Female,110.4,200.0,White,No,No,Low,No,Metformin,99,64,88,27.6,Normal
+63,Female,88.5,176.1,Other,No,Yes,Active,Yes,Metformin,145,68,73,28.5,Hypertension
+21,Male,119.5,178.3,Mixed,No,No,Active,Yes,No Medication,134,69,75,37.6,High
+41,Male,56.0,164.2,Other,Yes,No,Moderate,Yes,Metformin,153,97,71,20.8,Hypertension
+58,Female,70.7,176.0,Black,Yes,No,Low,Yes,No Medication,128,114,68,22.8,High
+35,Female,66.7,161.0,Other,Yes,Yes,Low,No,Lisinopril,178,63,63,25.7,Hypertension
+36,Female,66.1,181.9,Black,No,Yes,Low,No,No Medication,90,65,97,20.0,Normal
+82,Male,88.7,168.1,Mixed,Yes,No,Low,Yes,No Medication,170,97,78,31.4,Hypertension
+30,Female,100.0,167.8,Black,Yes,Yes,Active,Yes,Atorvastatin,140,89,73,35.5,High
+32,Male,83.9,151.2,White,No,Yes,Moderate,No,Atorvastatin,170,103,92,36.7,Hypertension
+26,Female,83.6,170.2,Mixed,No,No,Low,Yes,No Medication,129,110,73,28.9,High
+67,Female,94.6,172.0,Mixed,No,Yes,Moderate,No,Lisinopril,156,62,95,32.0,Hypertension
+87,Female,89.8,177.5,Black,Yes,No,Low,Yes,Aspirin,134,75,70,28.5,High
+46,Male,69.3,158.3,Other,No,No,Low,Yes,Metformin,119,85,100,27.7,High
+80,Female,111.5,151.2,Other,No,No,Low,No,No Medication,164,88,78,48.8,High
+25,Female,116.0,160.7,Mixed,No,No,Moderate,No,Lisinopril,150,71,90,44.9,Hypertension
+42,Female,103.6,165.8,Mixed,Yes,No,Low,No,Lisinopril,106,105,81,37.7,Hypertension
+58,Female,50.8,173.5,Asian,Yes,Yes,Low,Yes,No Medication,97,89,75,16.9,High
+41,Male,85.0,175.1,Asian,No,No,Moderate,Yes,Lisinopril,137,71,82,27.7,High
+85,Female,113.1,164.4,Asian,No,No,Moderate,No,Metformin,102,105,90,41.8,Hypertension
+54,Male,89.9,180.9,Black,Yes,Yes,Moderate,Yes,Metformin,90,116,63,27.5,Hypertension
+35,Female,108.7,170.5,Other,No,Yes,Active,No,No Medication,150,62,64,37.4,Hypertension
+32,Male,106.2,153.7,Other,No,No,Active,Yes,Lisinopril,158,91,76,45.0,Hypertension
+25,Female,118.6,171.2,Mixed,Yes,No,Active,No,Aspirin,152,71,93,40.5,Hypertension
+26,Female,85.1,155.6,White,No,No,Moderate,Yes,Lisinopril,114,63,96,35.1,Normal
+52,Female,59.7,163.4,Mixed,Yes,Yes,Low,No,No Medication,170,85,84,22.4,High
+23,Male,52.4,184.0,Mixed,No,Yes,Active,No,No Medication,132,76,60,15.5,High
+22,Male,85.2,160.0,White,No,Yes,Moderate,Yes,Aspirin,139,111,64,33.3,High
+36,Male,63.0,157.8,Mixed,Yes,No,Active,No,Aspirin,175,95,63,25.3,Hypertension
+38,Male,82.2,173.7,Other,Yes,Yes,Moderate,Yes,Lisinopril,116,74,100,27.2,Normal
+66,Male,77.7,199.4,Other,No,No,Low,Yes,Aspirin,163,100,70,19.5,Hypertension
+39,Female,102.1,181.7,White,Yes,Yes,Low,No,Lisinopril,154,98,95,30.9,Hypertension
+79,Female,86.3,176.0,Asian,No,No,Low,No,Lisinopril,110,81,80,27.9,High
+63,Male,56.9,162.8,White,Yes,No,Active,No,Aspirin,170,79,93,21.5,Hypertension
+62,Female,67.6,172.5,Asian,No,Yes,Moderate,No,Lisinopril,131,113,73,22.7,High
+59,Female,50.7,173.8,Black,Yes,Yes,Active,Yes,Metformin,172,64,84,16.8,Hypertension
+76,Female,82.9,158.5,Mixed,Yes,No,Moderate,No,No Medication,179,80,98,33.0,High
+70,Female,76.4,175.0,Other,Yes,No,Low,No,Aspirin,148,120,93,24.9,Hypertension
+71,Female,92.5,159.8,Black,Yes,No,Active,Yes,Aspirin,123,113,62,36.2,High
+84,Male,86.3,176.7,Black,Yes,No,Moderate,No,Aspirin,94,77,69,27.6,Normal
+88,Male,73.7,153.4,Black,Yes,No,Moderate,Yes,Atorvastatin,180,117,93,31.3,Hypertension
+59,Male,86.1,187.4,Black,Yes,No,Moderate,Yes,Atorvastatin,105,97,72,24.5,Hypertension
+77,Male,90.3,190.2,White,Yes,No,Active,No,Atorvastatin,106,104,60,25.0,Hypertension
+42,Male,62.1,178.7,Other,No,Yes,Active,No,No Medication,141,106,94,19.4,Hypertension
+78,Male,109.1,164.5,Black,No,No,Low,No,Metformin,172,60,79,40.3,Hypertension
+74,Female,88.4,166.6,Other,Yes,No,Low,Yes,Atorvastatin,144,106,72,31.8,Hypertension
+21,Female,93.6,193.4,Black,Yes,Yes,Moderate,Yes,Metformin,157,66,81,25.0,Hypertension
+57,Female,90.2,177.4,Other,No,No,Low,No,Atorvastatin,159,114,82,28.7,Hypertension
+25,Male,58.3,167.4,Mixed,Yes,No,Moderate,Yes,Aspirin,122,113,74,20.8,High
+23,Female,55.7,181.7,White,No,Yes,Active,No,Atorvastatin,123,99,84,16.9,High
+23,Male,109.1,151.1,White,No,No,Low,No,Aspirin,144,92,97,47.8,Hypertension
+22,Male,118.9,188.3,Other,No,No,Low,Yes,No Medication,128,120,73,33.5,High
+79,Male,55.7,164.5,White,No,Yes,Low,Yes,Lisinopril,129,65,60,20.6,High
+65,Female,65.4,159.8,Asian,No,Yes,Moderate,Yes,No Medication,123,72,80,25.6,High
+89,Female,104.1,164.2,Black,No,Yes,Low,No,Metformin,134,69,79,38.6,High
+53,Male,92.3,197.4,Asian,No,No,Moderate,No,Atorvastatin,180,75,79,23.7,Hypertension
+65,Male,53.7,189.8,Other,Yes,Yes,Moderate,Yes,Lisinopril,125,83,63,14.9,High
+64,Female,75.3,170.8,White,Yes,No,Low,Yes,Atorvastatin,108,78,73,25.8,Normal
+78,Female,100.2,193.4,Asian,Yes,Yes,Moderate,No,Lisinopril,108,69,98,26.8,Normal
+59,Male,118.6,179.4,Black,No,No,Active,No,Lisinopril,108,88,79,36.9,High
+29,Female,87.5,176.7,Black,No,No,Active,No,Aspirin,144,109,100,28.0,Hypertension
+25,Male,50.1,169.5,Black,Yes,No,Active,No,No Medication,141,61,72,17.4,Hypertension
+47,Male,93.8,165.2,Asian,Yes,Yes,Low,No,No Medication,114,81,63,34.4,High
+24,Male,90.3,172.3,Other,Yes,Yes,Moderate,Yes,Aspirin,127,89,88,30.4,High
+78,Female,92.2,165.5,Other,Yes,No,Low,No,Aspirin,166,111,64,33.7,Hypertension
+30,Male,98.7,183.8,Asian,Yes,Yes,Moderate,Yes,Atorvastatin,157,87,60,29.2,High
+23,Male,113.3,194.4,Black,No,Yes,Moderate,No,Metformin,133,81,60,30.0,High
+69,Female,110.2,174.0,Asian,Yes,Yes,Active,Yes,Aspirin,120,93,76,36.4,High
+46,Male,113.3,171.8,Asian,Yes,No,Active,Yes,Metformin,118,110,63,38.4,Hypertension
+30,Male,86.0,157.1,Mixed,Yes,No,Moderate,Yes,Lisinopril,163,98,81,34.8,Hypertension
+24,Female,90.9,166.3,Black,Yes,Yes,Active,No,Lisinopril,120,91,92,32.9,High
+18,Female,79.2,167.5,Mixed,No,No,Low,Yes,Atorvastatin,121,114,80,28.2,High
+39,Male,100.9,184.3,Black,No,No,Moderate,Yes,No Medication,96,100,96,29.7,Hypertension
+18,Male,105.3,197.9,Mixed,No,Yes,Active,No,Lisinopril,174,96,75,26.9,Hypertension
+36,Female,53.5,157.3,Other,Yes,Yes,Moderate,No,Metformin,110,95,84,21.6,Hypertension
+24,Female,100.3,152.4,Other,No,No,Moderate,Yes,Metformin,124,86,92,43.2,High
+84,Female,67.7,155.5,Other,No,Yes,Active,Yes,Atorvastatin,94,63,89,28.0,Normal
+48,Male,119.2,171.7,Other,No,No,Low,No,Aspirin,159,94,96,40.4,Hypertension
+45,Female,106.6,155.9,White,No,Yes,Low,No,No Medication,127,87,73,43.9,High
+19,Female,66.3,192.8,Black,No,Yes,Active,Yes,Lisinopril,95,65,61,17.8,Normal
+80,Male,51.7,167.5,Other,Yes,No,Active,Yes,Atorvastatin,109,83,79,18.4,High
+44,Male,105.7,151.6,Asian,No,No,Low,Yes,No Medication,139,116,67,46.0,High
+57,Female,84.6,152.0,Mixed,Yes,Yes,Active,Yes,Aspirin,96,89,95,36.6,High
+44,Female,84.2,158.3,Asian,No,Yes,Active,No,Metformin,129,81,98,33.6,High
+30,Male,59.0,159.6,Asian,Yes,Yes,Active,No,Atorvastatin,180,116,68,23.2,Hypertension
+55,Female,104.8,174.2,Asian,Yes,No,Low,No,Lisinopril,100,75,86,34.5,Normal
+65,Male,110.0,181.7,White,No,No,Active,Yes,Lisinopril,176,68,64,33.3,Hypertension
+54,Female,56.6,151.1,White,Yes,Yes,Moderate,No,Metformin,142,77,79,24.8,Hypertension
+73,Female,111.2,185.9,Mixed,Yes,Yes,Active,No,Atorvastatin,134,68,83,32.2,High
+29,Female,87.8,174.0,Asian,No,No,Active,Yes,Aspirin,134,67,63,29.0,High
+22,Female,99.4,188.2,Mixed,No,No,Low,No,No Medication,131,97,75,28.1,High
+87,Male,98.9,184.1,White,Yes,No,Moderate,No,No Medication,175,84,95,29.2,High
+54,Male,113.9,180.2,Black,No,Yes,Active,Yes,Metformin,147,80,99,35.1,High
+90,Male,80.7,163.6,Other,No,Yes,Moderate,No,Lisinopril,132,73,96,30.2,High
+22,Male,95.1,190.8,Black,No,Yes,Moderate,No,No Medication,157,113,94,26.1,Hypertension
+52,Female,74.5,150.1,Asian,No,Yes,Active,No,Lisinopril,171,64,83,33.1,Hypertension
+45,Male,72.1,181.1,Asian,No,Yes,Low,No,Aspirin,90,94,83,22.0,Hypertension
+67,Female,119.7,162.6,White,Yes,No,Active,Yes,Aspirin,105,86,87,45.3,High
+84,Male,107.3,171.7,White,Yes,Yes,Moderate,No,Aspirin,107,91,68,36.4,Hypertension
+88,Male,100.3,194.8,Black,Yes,Yes,Active,No,Aspirin,154,83,80,26.4,High
+78,Female,93.0,195.0,Asian,No,No,Low,No,Aspirin,112,61,93,24.5,Normal
+41,Male,78.9,177.4,Other,Yes,Yes,Low,Yes,Metformin,143,74,88,25.1,Hypertension
+40,Male,118.5,159.1,Mixed,No,Yes,Moderate,Yes,Metformin,104,96,76,46.8,Hypertension
+88,Male,92.1,185.5,Black,No,No,Low,No,Lisinopril,147,85,70,26.8,High
+60,Male,111.7,155.5,Mixed,No,No,Low,No,Metformin,90,82,73,46.2,High
+36,Female,84.6,166.0,White,Yes,No,Low,No,Atorvastatin,154,115,61,30.7,Hypertension
+35,Male,97.2,179.0,Black,No,Yes,Active,No,Aspirin,128,115,77,30.3,High
+89,Male,100.4,185.4,Black,Yes,No,Active,Yes,Lisinopril,107,106,87,29.2,Hypertension
+39,Female,118.5,169.8,Mixed,No,Yes,Low,No,Lisinopril,123,76,87,41.1,High
+39,Male,79.0,194.6,Mixed,Yes,Yes,Moderate,Yes,Atorvastatin,143,97,76,20.9,Hypertension
+54,Female,95.4,196.9,Other,No,No,Moderate,No,Atorvastatin,140,62,74,24.6,Hypertension
+37,Male,98.0,160.4,Mixed,No,Yes,Moderate,No,Metformin,162,63,69,38.1,Hypertension
+79,Female,79.7,158.9,Asian,Yes,Yes,Active,Yes,No Medication,162,88,71,31.6,High
+72,Male,59.8,160.9,Asian,Yes,No,Low,No,No Medication,120,108,82,23.1,High
+49,Male,102.6,195.2,Black,Yes,Yes,Active,No,No Medication,164,78,85,26.9,Hypertension
+66,Male,75.3,165.2,White,No,No,Moderate,No,Aspirin,109,89,77,27.6,High
+37,Female,98.9,163.2,Black,No,No,Low,Yes,Atorvastatin,115,106,72,37.1,Hypertension
+65,Male,52.4,159.6,White,No,No,Active,Yes,Lisinopril,137,114,95,20.6,High
+26,Male,108.9,196.3,Black,Yes,Yes,Active,Yes,No Medication,144,107,84,28.3,Hypertension
+22,Female,92.1,167.4,Black,Yes,Yes,Low,Yes,Aspirin,99,74,74,32.9,Normal
+58,Male,57.4,159.4,White,Yes,No,Moderate,Yes,No Medication,129,117,83,22.6,High
+30,Male,75.3,175.6,Asian,Yes,Yes,Active,No,Lisinopril,130,87,82,24.4,High
+65,Female,111.7,180.9,Other,Yes,No,Low,Yes,Metformin,134,86,74,34.1,High
+85,Male,83.2,177.2,Asian,No,Yes,Active,No,Metformin,113,107,73,26.5,Hypertension
+52,Male,54.1,179.5,Black,Yes,Yes,Moderate,Yes,No Medication,150,83,61,16.8,High
+72,Male,98.9,193.6,Other,Yes,Yes,Moderate,No,Aspirin,171,105,96,26.4,Hypertension
+68,Female,55.2,161.7,White,Yes,No,Moderate,Yes,No Medication,118,115,82,21.1,Hypertension
+74,Male,53.1,163.0,Asian,No,No,Active,No,Aspirin,153,102,100,20.0,Hypertension
+20,Male,113.8,174.2,Black,Yes,No,Low,Yes,Lisinopril,149,93,80,37.5,Hypertension
+54,Female,55.8,150.5,White,No,No,Active,No,Atorvastatin,153,106,93,24.6,Hypertension
+32,Female,76.4,153.7,Mixed,Yes,Yes,Active,No,No Medication,110,77,95,32.3,Normal
+50,Male,56.8,182.5,White,No,Yes,Low,Yes,Aspirin,128,114,89,17.1,High
+66,Male,66.9,151.0,White,No,Yes,Low,No,Aspirin,158,79,69,29.3,Hypertension
+21,Female,89.1,165.1,Mixed,No,No,Active,No,Aspirin,177,98,61,32.7,Hypertension
+79,Female,83.2,155.6,White,No,Yes,Active,Yes,Aspirin,107,79,65,34.4,Normal
+39,Male,94.7,197.1,Other,Yes,Yes,Active,Yes,Atorvastatin,131,70,99,24.4,High
+66,Male,98.0,153.7,Asian,No,No,Active,Yes,Metformin,122,77,66,41.5,High
+90,Male,110.0,190.4,White,Yes,No,Low,Yes,Atorvastatin,95,108,75,30.3,Hypertension
+80,Male,111.1,155.2,Asian,No,Yes,Active,No,Lisinopril,147,102,99,46.1,Hypertension
+38,Female,99.8,154.2,White,Yes,No,Moderate,Yes,Atorvastatin,99,104,91,42.0,Hypertension
+57,Female,97.2,163.9,Black,Yes,No,Low,No,No Medication,169,100,66,36.2,Hypertension
+88,Male,115.7,187.1,Asian,No,No,Low,No,Lisinopril,160,72,87,33.1,Hypertension
+76,Female,71.3,155.8,Black,No,Yes,Moderate,No,No Medication,128,60,96,29.4,High
+23,Male,89.5,186.4,White,Yes,Yes,Moderate,No,Lisinopril,179,89,96,25.8,High
+70,Female,83.8,196.1,Black,Yes,Yes,Moderate,No,Atorvastatin,97,99,79,21.8,Hypertension
+31,Male,74.5,177.1,Mixed,Yes,No,Active,Yes,Metformin,158,88,83,23.8,High
+43,Female,51.6,159.2,Mixed,No,No,Low,No,No Medication,171,65,78,20.4,Hypertension
+48,Male,81.4,186.1,Other,No,Yes,Active,Yes,No Medication,167,60,91,23.5,Hypertension
+40,Female,70.2,170.0,White,Yes,Yes,Low,No,Aspirin,180,73,92,24.3,Hypertension
+70,Female,110.1,153.9,Asian,No,No,Moderate,Yes,Aspirin,159,76,99,46.5,Hypertension
+50,Male,77.3,155.6,Other,Yes,No,Active,No,Atorvastatin,177,77,91,31.9,Hypertension
+42,Male,96.8,165.3,Other,No,No,Low,Yes,Aspirin,137,103,62,35.4,High
+26,Female,63.9,169.0,Black,Yes,Yes,Moderate,No,Lisinopril,115,106,81,22.4,Hypertension
+53,Female,105.1,180.5,Mixed,Yes,Yes,Moderate,Yes,Metformin,162,93,84,32.3,Hypertension
+32,Female,96.3,172.9,Asian,Yes,No,Active,Yes,Aspirin,172,110,71,32.2,Hypertension
+28,Male,77.8,163.7,White,No,No,Active,No,Metformin,175,80,88,29.0,High
+85,Male,118.4,184.0,Mixed,Yes,Yes,Active,No,No Medication,150,76,86,35.0,Hypertension
+73,Male,117.4,186.5,White,Yes,No,Active,Yes,Lisinopril,103,101,76,33.8,Hypertension
+73,Male,62.3,193.5,Mixed,Yes,No,Low,Yes,Lisinopril,104,100,69,16.6,Hypertension
+19,Male,73.7,186.0,Black,Yes,No,Moderate,No,Atorvastatin,91,73,73,21.3,Normal
+62,Female,69.1,164.4,White,Yes,No,Active,Yes,Atorvastatin,168,61,83,25.6,Hypertension
+70,Female,108.4,168.6,Mixed,Yes,Yes,Low,Yes,Atorvastatin,177,97,66,38.1,Hypertension
+58,Male,63.1,198.8,Other,No,No,Low,Yes,Lisinopril,169,95,87,16.0,Hypertension
+54,Female,115.0,175.9,White,Yes,No,Moderate,Yes,No Medication,149,109,82,37.2,Hypertension
+68,Male,64.3,172.6,Asian,No,No,Moderate,Yes,Metformin,172,78,99,21.6,Hypertension
+75,Male,55.3,177.5,Black,No,Yes,Moderate,Yes,Lisinopril,141,102,80,17.6,Hypertension
+39,Male,90.6,166.7,Black,No,No,Active,No,Atorvastatin,110,107,97,32.6,Hypertension
+38,Female,96.2,185.6,Asian,No,Yes,Moderate,Yes,Atorvastatin,125,95,76,27.9,High
+21,Male,69.3,153.4,Mixed,Yes,Yes,Active,Yes,No Medication,98,62,98,29.4,Normal
+35,Female,100.1,196.3,Asian,Yes,Yes,Low,No,Aspirin,150,101,77,26.0,Hypertension
+73,Female,107.0,189.8,Other,Yes,No,Low,No,Aspirin,130,116,85,29.7,High
+52,Female,88.7,161.7,Mixed,Yes,No,Moderate,Yes,No Medication,94,92,69,33.9,Hypertension
+48,Female,78.8,178.8,Mixed,No,Yes,Moderate,Yes,Lisinopril,132,70,82,24.6,High
+44,Male,70.1,162.5,Asian,Yes,Yes,Low,No,Atorvastatin,125,65,64,26.5,High
+20,Male,90.5,190.7,White,No,Yes,Moderate,No,Metformin,122,89,72,24.9,High
+59,Male,77.6,159.3,Other,No,Yes,Moderate,Yes,Lisinopril,166,68,72,30.6,Hypertension
+26,Female,106.0,198.4,Asian,No,Yes,Active,Yes,Atorvastatin,110,75,98,26.9,Normal
+25,Male,118.8,187.3,Asian,No,Yes,Low,No,Lisinopril,94,76,79,33.9,Normal
+28,Female,65.0,153.6,Other,Yes,No,Active,Yes,Atorvastatin,118,84,76,27.6,High
+90,Female,60.1,177.1,White,Yes,No,Low,No,Aspirin,92,85,94,19.2,High
+29,Female,86.7,195.2,Black,No,Yes,Active,Yes,No Medication,95,91,77,22.8,Hypertension
+21,Male,116.7,180.5,Other,Yes,No,Moderate,Yes,Aspirin,176,74,78,35.8,Hypertension
+45,Female,116.0,162.2,Black,No,Yes,Moderate,No,Atorvastatin,158,67,70,44.1,Hypertension
+78,Male,86.5,166.1,Mixed,No,Yes,Moderate,Yes,Aspirin,132,106,96,31.4,High
+21,Male,110.0,175.9,White,Yes,Yes,Moderate,Yes,Aspirin,145,68,65,35.6,Hypertension
+44,Male,104.5,180.5,Mixed,Yes,Yes,Moderate,Yes,Atorvastatin,161,66,71,32.1,Hypertension
+57,Female,73.6,196.0,Mixed,Yes,No,Low,Yes,Atorvastatin,135,105,86,19.2,High
+67,Female,111.5,193.3,White,No,No,Low,Yes,Aspirin,90,91,70,29.8,Hypertension
+61,Male,62.5,164.1,White,No,Yes,Moderate,Yes,Lisinopril,99,106,60,23.2,Hypertension
+51,Male,50.2,188.1,Mixed,No,Yes,Moderate,No,Metformin,157,74,76,14.2,Hypertension
+26,Female,90.5,185.1,Other,No,Yes,Low,No,No Medication,91,101,76,26.4,Hypertension
+41,Female,72.2,173.6,Other,Yes,No,Moderate,No,No Medication,120,97,84,24.0,High
+85,Male,70.2,189.8,Mixed,No,No,Moderate,Yes,Lisinopril,104,102,68,19.5,Hypertension
+24,Female,103.5,167.1,Other,No,No,Low,No,Aspirin,130,115,70,37.1,High
+75,Male,68.1,155.1,Black,Yes,Yes,Low,Yes,Atorvastatin,91,108,73,28.3,Hypertension
+57,Male,87.8,186.5,Mixed,Yes,Yes,Low,Yes,Atorvastatin,102,70,74,25.2,Normal
+68,Male,70.8,161.9,Other,Yes,Yes,Moderate,Yes,Aspirin,100,64,83,27.0,Normal
+48,Female,89.5,167.5,Other,No,No,Moderate,Yes,No Medication,102,71,99,31.9,Normal
+22,Male,70.8,166.7,Other,Yes,No,Moderate,No,Lisinopril,113,101,97,25.5,Hypertension
+73,Male,100.5,155.7,Mixed,No,No,Moderate,Yes,No Medication,116,102,60,41.5,Hypertension
+49,Female,94.3,178.5,Asian,Yes,Yes,Active,No,Lisinopril,170,65,81,29.6,Hypertension
+74,Male,53.0,177.8,Black,No,Yes,Moderate,Yes,Aspirin,104,110,73,16.8,Hypertension
+21,Female,117.8,185.3,Other,No,No,Active,No,Lisinopril,144,86,65,34.3,High
+50,Male,55.6,157.1,Mixed,No,No,Active,No,Aspirin,98,114,83,22.5,Hypertension
+33,Male,112.8,172.8,Asian,Yes,Yes,Active,Yes,No Medication,110,71,69,37.8,Normal
+22,Male,105.2,159.5,Black,No,No,Active,No,No Medication,140,113,93,41.4,Hypertension
+40,Male,62.9,199.6,White,No,No,Moderate,No,Atorvastatin,115,76,70,15.8,Normal
+50,Male,71.6,175.4,Mixed,No,No,Moderate,No,No Medication,123,114,85,23.3,High
+36,Male,104.2,183.1,Asian,No,No,Moderate,Yes,Metformin,162,105,81,31.1,Hypertension
+21,Female,87.9,172.7,Black,Yes,Yes,Low,No,No Medication,147,73,89,29.5,Hypertension
+66,Female,94.2,160.6,Other,No,Yes,Moderate,No,Metformin,133,108,82,36.5,High
+31,Female,56.2,172.7,Black,Yes,No,Moderate,Yes,Metformin,136,88,66,18.8,High
+36,Male,57.0,184.5,White,No,Yes,Low,Yes,No Medication,179,60,70,16.7,Hypertension
+64,Female,74.7,150.6,Asian,No,No,Moderate,Yes,No Medication,122,86,90,32.9,High
+73,Male,55.1,197.4,White,Yes,No,Active,No,No Medication,111,60,99,14.1,Normal
+42,Male,79.6,173.7,Asian,No,No,Active,No,Metformin,130,101,67,26.4,High
+27,Female,55.6,164.9,White,No,No,Active,No,Lisinopril,152,117,77,20.4,Hypertension
+56,Male,87.0,168.8,Asian,Yes,Yes,Active,Yes,No Medication,158,94,79,30.5,Hypertension
+31,Male,55.5,168.5,Asian,Yes,Yes,Low,No,Metformin,156,114,88,19.5,Hypertension
+81,Female,102.7,188.0,White,Yes,No,Moderate,Yes,Lisinopril,149,86,69,29.1,High
+43,Male,106.7,169.9,Other,Yes,Yes,Low,Yes,Aspirin,142,120,77,37.0,Hypertension
+33,Female,109.5,185.1,White,No,No,Low,No,Metformin,178,99,68,32.0,Hypertension
+20,Female,52.2,192.9,Asian,Yes,Yes,Low,No,Lisinopril,132,62,91,14.0,High
+77,Male,60.6,158.2,Black,No,Yes,Moderate,Yes,Aspirin,130,82,88,24.2,High
+41,Female,66.4,185.5,White,Yes,No,Active,Yes,Lisinopril,138,114,66,19.3,High
+90,Male,98.1,173.9,Mixed,No,No,Active,No,Lisinopril,157,63,89,32.4,Hypertension
+18,Female,105.8,196.2,Other,No,No,Moderate,No,Metformin,169,80,64,27.5,High
+53,Female,58.4,185.3,Asian,Yes,Yes,Moderate,No,Aspirin,95,96,95,17.0,Hypertension
+83,Female,105.2,190.9,Black,Yes,No,Low,Yes,Lisinopril,174,96,100,28.9,Hypertension
+27,Male,92.7,158.4,Asian,Yes,Yes,Low,Yes,Lisinopril,177,95,93,36.9,Hypertension
+78,Female,69.0,166.3,Mixed,Yes,Yes,Active,No,No Medication,136,64,65,24.9,High
+81,Female,67.9,167.8,White,Yes,Yes,Low,No,No Medication,105,99,73,24.1,Hypertension
+89,Female,67.0,185.3,White,No,Yes,Low,Yes,No Medication,99,75,81,19.5,Normal
+78,Male,102.2,179.0,Other,Yes,No,Active,Yes,No Medication,129,100,95,31.9,High
+36,Male,69.3,160.4,Mixed,Yes,No,Moderate,No,Aspirin,118,85,82,26.9,High
+76,Male,104.0,180.3,Black,No,Yes,Moderate,No,Atorvastatin,178,108,68,32.0,Hypertension
+57,Female,88.4,156.8,Other,No,No,Moderate,No,Aspirin,143,105,84,36.0,Hypertension
+56,Female,64.1,194.2,Other,Yes,Yes,Active,No,Atorvastatin,154,70,80,17.0,Hypertension
+64,Female,52.5,199.5,White,No,No,Low,No,Atorvastatin,103,105,74,13.2,Hypertension
+74,Female,97.7,152.2,Asian,Yes,Yes,Active,No,Metformin,165,81,88,42.2,High
+90,Female,105.5,183.3,Black,No,Yes,Low,No,Atorvastatin,176,72,92,31.4,Hypertension
+64,Male,94.2,168.5,White,No,Yes,Low,No,No Medication,157,60,79,33.2,Hypertension
+65,Female,73.5,184.0,Mixed,No,No,Active,No,Lisinopril,151,118,71,21.7,Hypertension
+79,Female,103.8,189.6,Asian,Yes,Yes,Active,No,No Medication,148,94,90,28.9,Hypertension
+60,Male,64.6,195.1,Asian,Yes,No,Moderate,No,Aspirin,155,97,91,17.0,Hypertension
+84,Male,99.1,150.7,Black,No,Yes,Moderate,Yes,Atorvastatin,96,84,76,43.6,High
+81,Male,93.0,177.5,White,No,No,Moderate,No,Atorvastatin,160,95,100,29.5,Hypertension
+61,Female,55.2,154.2,White,Yes,No,Moderate,No,Lisinopril,134,97,74,23.2,High
+76,Female,93.8,157.4,Black,No,Yes,Active,Yes,No Medication,144,68,72,37.9,Hypertension
+80,Male,117.0,196.8,Black,Yes,No,Low,Yes,No Medication,127,91,63,30.2,High
+52,Female,104.8,184.8,Black,Yes,No,Low,No,No Medication,146,86,80,30.7,High
+54,Male,96.6,180.7,Black,No,Yes,Moderate,No,Metformin,169,108,78,29.6,Hypertension
+73,Female,88.5,161.4,Black,No,Yes,Active,Yes,Lisinopril,142,86,86,34.0,High
+83,Male,66.8,163.8,Other,Yes,No,Moderate,Yes,Metformin,107,120,89,24.9,Hypertension
+66,Female,102.1,178.0,Other,Yes,No,Active,Yes,Lisinopril,166,97,81,32.2,Hypertension
+42,Female,77.4,180.8,White,No,No,Active,Yes,No Medication,127,114,76,23.7,High
+41,Male,101.3,153.2,Other,No,Yes,Low,Yes,No Medication,147,79,62,43.2,Hypertension
+20,Female,78.9,163.8,Mixed,Yes,Yes,Active,No,Atorvastatin,139,110,60,29.4,High
+45,Female,116.6,194.0,Asian,No,No,Moderate,No,Aspirin,136,71,78,31.0,High
+80,Female,90.7,169.4,Asian,Yes,No,Moderate,No,Atorvastatin,126,87,81,31.6,High
+44,Female,57.4,166.9,Black,No,Yes,Low,Yes,Metformin,155,107,79,20.6,Hypertension
+86,Female,89.0,183.2,Black,Yes,No,Active,No,Metformin,164,75,66,26.5,Hypertension
+24,Male,114.4,161.5,Black,No,No,Moderate,Yes,No Medication,93,86,99,43.9,High
+86,Male,113.5,155.2,Mixed,No,Yes,Moderate,Yes,Metformin,140,62,64,47.1,Hypertension
+43,Male,54.4,185.3,Asian,No,Yes,Low,No,Atorvastatin,121,112,68,15.8,High
+66,Male,56.0,182.3,Mixed,No,No,Low,Yes,Aspirin,143,63,66,16.9,Hypertension
+83,Female,85.2,151.0,White,Yes,No,Active,Yes,Atorvastatin,139,101,80,37.4,High
+88,Male,68.9,156.0,White,No,Yes,Low,No,Atorvastatin,166,116,92,28.3,Hypertension
+39,Female,93.5,155.5,White,Yes,Yes,Moderate,No,Atorvastatin,123,62,63,38.7,High
+86,Male,72.5,199.3,Asian,Yes,Yes,Active,No,Aspirin,160,89,86,18.3,High
+71,Male,98.3,150.7,Other,No,Yes,Active,No,Atorvastatin,138,83,70,43.3,High
+37,Female,68.5,165.7,White,No,Yes,Moderate,No,Metformin,173,102,90,24.9,Hypertension
+73,Female,66.1,197.6,Black,No,No,Moderate,Yes,No Medication,172,87,83,16.9,High
+27,Male,69.6,176.4,Black,No,No,Low,Yes,Metformin,165,83,65,22.4,High
+42,Female,105.8,174.3,White,Yes,No,Active,Yes,Atorvastatin,117,100,97,34.8,Hypertension
+73,Male,53.5,177.6,White,No,Yes,Low,Yes,Metformin,142,89,100,17.0,High
+66,Male,67.8,161.6,White,Yes,Yes,Low,No,Metformin,105,72,61,26.0,Normal
+72,Female,96.6,187.8,White,No,No,Low,Yes,Atorvastatin,162,67,66,27.4,Hypertension
+73,Male,51.0,174.3,Asian,No,No,Moderate,Yes,Aspirin,116,85,88,16.8,High
+62,Male,52.1,172.8,Black,Yes,Yes,Low,Yes,Atorvastatin,95,98,68,17.4,Hypertension
+68,Female,112.3,188.2,Black,Yes,No,Moderate,No,Aspirin,153,63,63,31.7,Hypertension
+43,Male,88.5,191.8,Mixed,Yes,Yes,Low,No,Atorvastatin,90,92,81,24.1,Hypertension
+79,Female,119.8,168.7,Black,No,Yes,Low,No,Metformin,131,62,73,42.1,High
+80,Male,96.4,169.7,Black,Yes,Yes,Low,Yes,Metformin,172,95,65,33.5,Hypertension
+68,Male,115.5,159.2,Mixed,No,No,Moderate,Yes,Metformin,127,109,100,45.6,High
+89,Female,119.6,175.0,White,Yes,No,Low,No,Metformin,122,114,67,39.1,High
+76,Female,100.3,183.2,Mixed,No,No,Low,Yes,Aspirin,96,71,68,29.9,Normal
+65,Male,99.3,178.9,Black,Yes,No,Active,Yes,Aspirin,124,114,75,31.0,High
+71,Male,61.8,192.3,Black,No,No,Low,Yes,Atorvastatin,131,86,72,16.7,High
+21,Female,56.2,187.5,Mixed,Yes,No,Moderate,No,No Medication,159,80,97,16.0,High
+60,Female,72.1,157.9,Other,No,No,Low,Yes,Lisinopril,152,117,69,28.9,Hypertension
+90,Female,116.4,185.5,Other,No,Yes,Moderate,No,Atorvastatin,93,69,87,33.8,Normal
+69,Female,79.8,189.6,Asian,Yes,No,Low,Yes,No Medication,94,91,82,22.2,Hypertension
+82,Female,98.0,183.6,Black,No,Yes,Moderate,No,No Medication,168,86,73,29.1,High
+45,Male,78.1,152.5,Other,No,No,Active,Yes,Lisinopril,94,91,83,33.6,Hypertension
+47,Male,93.6,155.8,Black,No,No,Low,Yes,No Medication,141,118,77,38.6,Hypertension
+45,Male,58.7,197.8,Other,No,No,Moderate,Yes,Lisinopril,142,99,75,15.0,Hypertension
+30,Male,62.0,170.2,White,Yes,No,Active,Yes,No Medication,104,103,91,21.4,Hypertension
+40,Female,51.3,157.5,Black,No,No,Low,Yes,No Medication,97,112,88,20.7,Hypertension
+38,Male,74.7,169.2,White,No,Yes,Low,Yes,Atorvastatin,131,79,84,26.1,High
+89,Female,96.5,183.2,Other,No,Yes,Low,No,Lisinopril,169,115,95,28.8,Hypertension
+70,Female,57.2,161.2,Other,Yes,No,Active,No,No Medication,103,115,90,22.0,Hypertension
+74,Male,105.2,178.5,Other,No,Yes,Active,No,Atorvastatin,134,97,94,33.0,High
+80,Male,85.4,177.1,Asian,Yes,Yes,Active,No,No Medication,166,117,90,27.2,Hypertension
+51,Female,114.0,193.5,Black,Yes,No,Low,Yes,Atorvastatin,166,66,68,30.4,Hypertension
+80,Male,91.9,188.0,Asian,No,Yes,Moderate,Yes,Atorvastatin,110,69,74,26.0,Normal
+68,Male,69.6,199.5,Mixed,Yes,Yes,Active,No,Metformin,122,113,98,17.5,High
+84,Male,72.1,178.2,Black,No,No,Low,No,Atorvastatin,153,69,62,22.7,Hypertension
+63,Male,73.7,150.3,Black,No,Yes,Active,No,No Medication,162,84,82,32.6,High
+18,Female,54.2,183.1,White,No,No,Moderate,Yes,Metformin,133,64,95,16.2,High
+45,Female,78.3,184.5,White,No,Yes,Active,No,Metformin,130,119,91,23.0,High
+19,Female,67.6,162.6,Black,Yes,Yes,Low,No,Aspirin,91,60,92,25.6,Normal
+27,Male,112.5,169.6,Other,No,Yes,Low,Yes,Atorvastatin,108,70,73,39.1,Normal
+34,Female,64.1,169.1,White,No,No,Moderate,Yes,Metformin,103,95,65,22.4,Hypertension
+41,Female,97.2,173.8,Asian,Yes,No,Low,No,Aspirin,116,88,67,32.2,High
+62,Female,119.9,193.8,White,Yes,No,Active,No,Metformin,168,74,82,31.9,Hypertension
+62,Male,104.1,173.5,Other,Yes,No,Moderate,Yes,Lisinopril,117,96,71,34.6,Hypertension
+36,Female,106.1,184.5,White,Yes,No,Moderate,No,Metformin,94,76,97,31.2,Normal
+45,Male,87.8,174.2,Other,Yes,Yes,Low,Yes,Metformin,116,112,83,28.9,Hypertension
+85,Female,50.3,156.3,Asian,Yes,Yes,Low,Yes,Lisinopril,168,63,90,20.6,Hypertension
+43,Female,107.2,179.0,Asian,Yes,No,Low,Yes,No Medication,95,91,75,33.5,Hypertension
+78,Female,87.7,152.6,White,Yes,Yes,Active,No,No Medication,133,84,80,37.7,High
+41,Male,89.1,172.0,White,Yes,No,Active,No,Aspirin,180,87,65,30.1,High
+84,Female,97.7,151.9,Other,No,No,Low,No,No Medication,95,82,85,42.3,High
+70,Male,87.1,170.5,Other,No,Yes,Active,No,No Medication,95,78,63,30.0,Normal
+28,Male,99.0,158.6,Other,No,No,Low,No,Aspirin,179,88,68,39.4,High
+71,Male,84.3,198.5,Mixed,No,No,Low,Yes,Atorvastatin,133,112,88,21.4,High
+20,Male,64.2,165.3,Mixed,No,Yes,Active,Yes,Aspirin,122,63,67,23.5,High
+77,Female,85.0,193.5,Black,No,Yes,Low,No,Aspirin,117,72,83,22.7,Normal
+68,Female,112.7,176.9,White,Yes,No,Low,No,No Medication,114,103,83,36.0,Hypertension
+23,Male,119.2,180.4,Asian,No,Yes,Moderate,No,Atorvastatin,160,111,67,36.6,Hypertension
+40,Male,89.1,175.7,Black,Yes,Yes,Moderate,No,No Medication,148,112,85,28.9,Hypertension
+40,Male,109.5,154.9,Mixed,Yes,No,Moderate,Yes,Lisinopril,137,88,75,45.6,High
+77,Female,105.8,168.0,Mixed,No,Yes,Active,Yes,Metformin,133,108,97,37.5,High
+40,Male,69.9,192.3,White,No,Yes,Low,Yes,Lisinopril,117,104,91,18.9,Hypertension
+22,Female,72.5,154.3,Asian,No,Yes,Moderate,Yes,Aspirin,107,65,89,30.5,Normal
+84,Male,71.2,154.1,Asian,No,No,Active,No,Aspirin,126,63,63,30.0,High
+87,Male,100.0,170.8,Asian,Yes,No,Moderate,Yes,No Medication,176,76,72,34.3,Hypertension
+24,Female,111.6,168.4,White,No,Yes,Active,No,Atorvastatin,139,92,87,39.4,High
+48,Female,75.8,158.9,White,Yes,Yes,Active,Yes,Atorvastatin,163,69,89,30.0,Hypertension
+78,Female,109.0,199.3,Other,No,Yes,Active,No,Atorvastatin,97,71,61,27.4,Normal
+59,Female,64.4,173.5,Mixed,Yes,Yes,Low,No,Atorvastatin,133,82,85,21.4,High
+31,Female,93.6,182.9,White,No,No,Moderate,No,Lisinopril,152,62,100,28.0,Hypertension
+35,Male,97.6,172.4,Black,No,Yes,Moderate,Yes,No Medication,179,75,77,32.8,Hypertension
+65,Female,72.0,196.8,Other,Yes,No,Active,Yes,Aspirin,113,95,99,18.6,Hypertension
+29,Male,100.6,197.4,Black,No,Yes,Active,Yes,Metformin,122,101,76,25.8,High
+45,Male,56.1,167.9,Asian,No,Yes,Low,No,No Medication,130,71,89,19.9,High
+73,Female,75.2,181.2,Asian,Yes,Yes,Low,Yes,Aspirin,133,96,75,22.9,High
+23,Female,87.6,159.0,Mixed,No,No,Low,No,Lisinopril,104,75,80,34.7,Normal
+70,Female,104.0,157.5,Black,No,No,Moderate,Yes,Aspirin,152,119,67,41.9,Hypertension
+71,Male,60.9,196.0,Asian,Yes,No,Low,Yes,No Medication,109,85,78,15.9,High
+58,Female,86.3,190.8,White,Yes,No,Active,No,Atorvastatin,159,84,61,23.7,High
+30,Female,115.0,156.4,Other,No,Yes,Moderate,Yes,Aspirin,165,69,98,47.0,Hypertension
+57,Male,50.4,165.3,Mixed,No,Yes,Active,Yes,Metformin,136,76,96,18.4,High
+83,Female,76.1,191.4,Mixed,Yes,Yes,Moderate,Yes,No Medication,152,81,84,20.8,High
+67,Female,57.0,169.1,Mixed,Yes,No,Moderate,Yes,Lisinopril,93,82,96,19.9,High
+24,Female,81.7,188.3,Other,Yes,No,Moderate,No,No Medication,97,72,62,23.0,Normal
+40,Male,56.7,176.5,Mixed,No,No,Moderate,Yes,Lisinopril,174,94,81,18.2,Hypertension
+61,Male,105.0,192.3,Asian,No,Yes,Active,Yes,Aspirin,134,60,79,28.4,High
+61,Female,112.3,173.9,Black,Yes,No,Active,Yes,No Medication,161,75,76,37.1,Hypertension
+36,Female,76.7,166.5,Mixed,No,No,Moderate,Yes,Aspirin,163,67,83,27.7,Hypertension
+66,Female,53.0,163.6,Black,No,No,Moderate,Yes,Atorvastatin,123,64,62,19.8,High
+28,Male,65.5,150.2,White,No,No,Active,Yes,Metformin,122,108,92,29.0,High
+52,Female,119.5,173.6,White,No,No,Low,Yes,Aspirin,165,90,75,39.7,Hypertension
+79,Female,64.9,163.1,Asian,No,Yes,Low,No,Lisinopril,173,119,83,24.4,Hypertension
+71,Female,56.5,186.3,Black,No,No,Moderate,No,Metformin,132,114,71,16.3,High
+55,Female,102.8,190.0,Black,Yes,Yes,Active,Yes,Atorvastatin,140,100,77,28.5,Hypertension
+46,Male,73.6,150.4,Black,No,Yes,Moderate,Yes,Metformin,133,65,73,32.5,High
+67,Male,117.7,188.8,White,Yes,Yes,Active,Yes,Metformin,107,61,77,33.0,Normal
+79,Female,90.9,190.7,Other,Yes,Yes,Active,Yes,Metformin,128,70,66,25.0,High
+41,Male,73.9,190.5,Mixed,Yes,Yes,Low,Yes,No Medication,142,97,60,20.4,Hypertension
+58,Male,80.1,193.6,Black,Yes,Yes,Moderate,No,No Medication,164,68,78,21.4,Hypertension
+61,Male,91.1,164.0,White,Yes,No,Active,Yes,No Medication,172,77,80,33.9,Hypertension
+38,Female,115.1,164.5,Black,Yes,No,Moderate,No,Metformin,119,66,75,42.5,Normal
+64,Male,82.4,173.8,Black,No,No,Moderate,Yes,Lisinopril,132,64,79,27.3,High
+58,Male,94.4,181.6,Mixed,No,No,Low,No,No Medication,92,99,68,28.6,Hypertension
+83,Female,58.2,174.0,Asian,Yes,Yes,Moderate,Yes,Metformin,163,76,67,19.2,Hypertension
+82,Female,89.3,152.3,Asian,No,Yes,Low,No,Lisinopril,148,81,82,38.5,High
+18,Female,60.1,153.5,Other,No,Yes,Moderate,Yes,No Medication,177,113,62,25.5,Hypertension
+53,Female,86.0,155.3,Black,Yes,No,Moderate,No,Aspirin,170,115,71,35.7,Hypertension
+89,Male,95.3,185.2,Other,Yes,No,Moderate,No,Atorvastatin,170,74,78,27.8,Hypertension
+67,Male,84.4,188.8,Asian,No,No,Low,No,Aspirin,109,89,68,23.7,High
+44,Male,105.0,198.8,Black,No,No,Active,Yes,Aspirin,159,114,95,26.6,Hypertension
+64,Male,107.1,164.6,Mixed,Yes,Yes,Moderate,Yes,Lisinopril,91,102,90,39.5,Hypertension
+88,Female,104.0,176.5,Asian,Yes,Yes,Moderate,Yes,Lisinopril,136,96,62,33.4,High
+83,Female,81.9,184.7,Other,Yes,No,Active,Yes,Aspirin,91,111,65,24.0,Hypertension
+24,Male,87.9,180.5,White,No,Yes,Moderate,Yes,Metformin,163,98,76,27.0,Hypertension
+76,Male,78.0,168.3,Black,Yes,Yes,Low,No,Atorvastatin,102,79,78,27.5,Normal
+65,Male,87.0,179.5,Asian,No,No,Moderate,Yes,Aspirin,97,60,67,27.0,Normal
+58,Male,88.0,168.5,Black,No,No,Active,Yes,Lisinopril,125,98,93,31.0,High
+70,Female,67.1,189.9,Other,Yes,No,Moderate,Yes,Lisinopril,96,120,62,18.6,Hypertension
+88,Female,69.5,182.3,Mixed,No,No,Moderate,No,Metformin,175,77,79,20.9,Hypertension
+79,Male,84.9,176.6,Other,Yes,Yes,Active,No,No Medication,106,115,65,27.2,Hypertension
+20,Female,88.4,185.0,Mixed,Yes,Yes,Moderate,No,Atorvastatin,112,90,61,25.8,Hypertension
+57,Female,104.4,151.9,Asian,No,No,Low,Yes,Metformin,131,101,74,45.2,High
+25,Female,58.9,152.5,White,Yes,No,Low,No,Lisinopril,116,80,84,25.3,High
+47,Female,91.1,193.2,Other,Yes,No,Moderate,No,No Medication,143,83,94,24.4,High
+69,Female,114.7,173.4,Other,No,No,Active,Yes,Aspirin,120,79,69,38.1,High
+19,Female,108.3,151.4,Other,No,No,Active,Yes,Lisinopril,123,61,79,47.2,High
+73,Female,113.9,197.5,Asian,No,Yes,Active,Yes,Aspirin,101,89,76,29.2,High
+67,Male,56.2,162.3,White,No,Yes,Active,No,Metformin,108,100,73,21.3,Hypertension
+53,Male,69.6,176.9,Black,Yes,No,Moderate,No,Lisinopril,139,119,85,22.2,High
+89,Female,58.7,155.2,White,Yes,Yes,Active,Yes,Aspirin,178,75,71,24.4,Hypertension
+22,Female,73.2,174.6,Black,Yes,Yes,Active,Yes,Lisinopril,115,96,64,24.0,Hypertension
+73,Female,53.3,173.1,Black,Yes,No,Active,Yes,Lisinopril,170,84,61,17.8,High
+25,Male,91.8,171.8,Mixed,Yes,No,Active,No,Metformin,145,100,92,31.1,Hypertension
+70,Female,66.5,188.0,Asian,Yes,No,Active,Yes,Metformin,127,60,66,18.8,High
+69,Male,103.1,174.6,Other,No,Yes,Active,Yes,Aspirin,131,88,84,33.8,High
+88,Male,87.6,187.9,Asian,Yes,No,Active,No,Metformin,156,69,69,24.8,Hypertension
+48,Male,68.9,189.9,Other,Yes,No,Active,No,Metformin,146,68,74,19.1,Hypertension
+45,Female,98.3,175.6,Black,Yes,Yes,Low,No,No Medication,110,101,72,31.9,Hypertension
+42,Male,115.0,184.3,Asian,No,Yes,Active,Yes,Aspirin,104,81,67,33.9,High
+73,Female,54.6,196.6,White,Yes,Yes,Low,No,No Medication,143,71,96,14.1,Hypertension
+57,Male,99.1,179.7,Black,Yes,No,Moderate,Yes,No Medication,173,83,82,30.7,High
+42,Female,109.1,172.6,Mixed,No,Yes,Low,No,Lisinopril,176,116,97,36.6,Hypertension
+68,Female,100.4,157.2,Mixed,No,No,Low,Yes,Lisinopril,150,114,60,40.6,Hypertension
+41,Female,81.1,179.4,Asian,Yes,No,Moderate,No,Aspirin,169,63,82,25.2,Hypertension
+34,Female,108.5,162.6,Asian,Yes,Yes,Active,No,Lisinopril,92,87,80,41.0,High
+49,Male,94.6,182.2,Mixed,No,No,Low,No,Aspirin,156,74,63,28.5,Hypertension
+69,Female,97.9,166.4,Other,No,No,Low,Yes,No Medication,162,86,82,35.4,High
+64,Male,70.5,198.7,Mixed,No,No,Moderate,Yes,No Medication,143,89,72,17.9,High
+55,Female,52.7,159.2,Other,No,Yes,Active,No,Metformin,164,82,68,20.8,High
+72,Male,115.4,196.8,Other,No,Yes,Moderate,No,No Medication,169,65,78,29.8,Hypertension
+80,Male,81.5,198.1,Other,No,No,Active,Yes,Lisinopril,149,71,75,20.8,Hypertension
+32,Male,77.3,197.1,Black,Yes,Yes,Low,Yes,Lisinopril,159,102,70,19.9,Hypertension
+57,Female,93.5,180.5,Other,Yes,No,Moderate,No,Lisinopril,146,107,83,28.7,Hypertension
+40,Male,89.4,192.1,Other,Yes,No,Active,No,No Medication,134,93,62,24.2,High
+42,Female,106.7,161.4,Other,No,No,Low,No,Metformin,141,91,71,41.0,Hypertension
+28,Female,63.5,158.1,Black,Yes,No,Active,No,Atorvastatin,174,105,84,25.4,Hypertension
+90,Male,116.8,151.9,Other,Yes,No,Moderate,No,Lisinopril,167,87,62,50.6,High
+62,Male,71.0,189.9,White,No,No,Moderate,No,Lisinopril,119,96,78,19.7,Hypertension
+34,Male,60.6,183.6,Mixed,No,Yes,Low,No,No Medication,110,93,78,18.0,Hypertension
+72,Female,67.2,180.7,Asian,Yes,No,Low,Yes,No Medication,147,86,95,20.6,High
+65,Female,99.1,187.8,Mixed,Yes,No,Moderate,No,Metformin,130,60,75,28.1,High
+57,Female,56.5,181.4,Other,Yes,Yes,Moderate,Yes,Atorvastatin,118,66,69,17.2,Normal
+37,Female,103.8,188.6,Other,No,Yes,Low,No,No Medication,117,120,72,29.2,Hypertension
+30,Female,110.1,168.5,Asian,Yes,Yes,Moderate,Yes,Aspirin,113,65,91,38.8,Normal
+38,Female,111.4,175.9,Asian,No,Yes,Moderate,Yes,Aspirin,156,120,68,36.0,Hypertension
+69,Female,105.2,191.2,Other,Yes,No,Moderate,No,Aspirin,151,64,95,28.8,Hypertension
+79,Male,77.7,192.2,White,No,No,Low,Yes,No Medication,166,116,61,21.0,Hypertension
+58,Female,62.2,187.2,Mixed,No,No,Active,Yes,Atorvastatin,98,71,81,17.7,Normal
+63,Male,72.4,158.6,Other,No,No,Low,No,Metformin,104,60,77,28.8,Normal
+71,Male,95.1,184.5,White,No,Yes,Active,No,No Medication,145,102,100,27.9,Hypertension
+74,Female,64.9,199.8,White,No,Yes,Active,No,Atorvastatin,158,96,84,16.3,Hypertension
+58,Male,56.1,174.8,Other,Yes,Yes,Moderate,Yes,Aspirin,112,112,87,18.4,Hypertension
+59,Male,105.9,194.9,Asian,Yes,Yes,Moderate,No,Aspirin,159,84,68,27.9,High
+34,Male,99.8,159.4,Mixed,Yes,No,Low,No,Lisinopril,143,74,91,39.3,Hypertension
+39,Female,106.6,163.5,Mixed,No,Yes,Moderate,Yes,Lisinopril,156,87,94,39.9,High
+43,Male,111.4,156.9,White,No,No,Moderate,Yes,Atorvastatin,112,92,95,45.3,Hypertension
+63,Female,90.1,195.6,Asian,No,No,Low,No,Aspirin,94,67,68,23.5,Normal
+19,Female,116.4,198.4,Black,Yes,No,Moderate,No,Atorvastatin,173,70,80,29.6,Hypertension
+65,Female,97.7,176.7,Black,Yes,No,Low,No,Aspirin,133,100,88,31.3,High
+51,Female,102.9,179.8,Asian,No,No,Low,Yes,No Medication,96,88,88,31.8,High
+27,Female,102.1,183.5,Black,No,Yes,Moderate,Yes,No Medication,116,76,68,30.3,Normal
+33,Female,60.2,170.3,Other,Yes,No,Moderate,Yes,Metformin,102,71,67,20.8,Normal
+52,Female,95.0,197.1,Black,No,No,Moderate,Yes,Lisinopril,128,71,64,24.5,High
+86,Female,117.7,151.2,White,No,Yes,Moderate,Yes,Lisinopril,104,100,64,51.5,Hypertension
+56,Female,114.2,195.8,Black,Yes,No,Low,Yes,No Medication,153,86,79,29.8,High
+43,Male,74.6,170.4,Other,Yes,No,Moderate,Yes,Metformin,131,82,76,25.7,High
+58,Female,90.0,188.4,White,Yes,Yes,Active,No,Metformin,164,69,71,25.4,Hypertension
+27,Male,73.3,193.9,Mixed,No,No,Moderate,Yes,Aspirin,95,120,92,19.5,Hypertension
+23,Male,99.2,191.6,Asian,No,Yes,Low,Yes,Aspirin,153,61,74,27.0,Hypertension
+89,Male,85.1,160.0,Asian,Yes,Yes,Active,Yes,Aspirin,94,90,85,33.2,Hypertension
+80,Female,79.5,153.8,White,No,No,Moderate,No,Atorvastatin,120,114,62,33.6,High
+79,Male,63.3,172.3,White,No,No,Low,No,Aspirin,136,68,61,21.3,High
+87,Male,79.0,153.6,Black,No,Yes,Active,Yes,Lisinopril,154,100,77,33.5,Hypertension
+70,Male,60.0,172.0,Asian,No,No,Low,No,No Medication,156,118,73,20.3,Hypertension
+82,Male,76.0,165.4,Asian,Yes,No,Low,Yes,Atorvastatin,176,102,76,27.8,Hypertension
+19,Female,94.1,179.6,White,Yes,Yes,Low,No,No Medication,148,108,82,29.2,Hypertension
+27,Male,65.1,198.7,Other,Yes,No,Low,Yes,No Medication,110,70,63,16.5,Normal
+64,Female,64.8,195.8,Other,No,Yes,Moderate,Yes,Metformin,139,66,61,16.9,High
+59,Male,106.1,159.7,Asian,Yes,No,Active,No,Atorvastatin,117,62,72,41.6,Normal
+62,Male,50.7,180.7,White,Yes,No,Moderate,No,No Medication,163,120,92,15.5,Hypertension
+43,Male,91.9,152.4,Asian,No,No,Active,Yes,Aspirin,105,109,100,39.6,Hypertension
+47,Female,50.1,172.7,Mixed,No,No,Active,Yes,Aspirin,164,112,97,16.8,Hypertension
+56,Male,80.6,177.2,Other,Yes,Yes,Low,Yes,No Medication,142,95,77,25.7,Hypertension
+45,Female,61.4,164.3,Black,Yes,No,Moderate,No,Atorvastatin,106,88,85,22.7,High
+89,Male,74.3,163.8,Other,No,Yes,Moderate,No,Metformin,148,66,74,27.7,Hypertension
+62,Male,77.7,191.2,Mixed,Yes,No,Low,No,Metformin,153,60,83,21.3,Hypertension
+27,Female,94.6,191.4,Other,Yes,No,Moderate,Yes,Metformin,115,79,66,25.8,Normal
+28,Female,115.5,157.3,Asian,No,Yes,Moderate,No,Lisinopril,103,110,77,46.7,Hypertension
+35,Female,116.1,157.1,Other,No,Yes,Moderate,No,Aspirin,168,104,69,47.0,Hypertension
+68,Male,114.4,186.6,Other,Yes,No,Active,Yes,Metformin,100,113,82,32.9,Hypertension
+54,Male,97.1,155.5,Mixed,No,Yes,Low,No,Aspirin,146,107,85,40.2,Hypertension
+86,Male,61.7,164.1,Black,No,No,Moderate,No,Metformin,129,70,74,22.9,High
+62,Male,105.6,186.8,White,Yes,No,Active,No,Aspirin,174,67,61,30.3,Hypertension
+50,Male,88.9,177.9,Asian,Yes,No,Low,No,Aspirin,115,70,78,28.1,Normal
+73,Female,105.2,198.7,Black,Yes,No,Active,Yes,Aspirin,142,64,97,26.6,Hypertension
+51,Female,55.4,170.5,Black,No,No,Moderate,No,No Medication,168,79,81,19.1,Hypertension
+69,Female,106.4,177.3,Black,Yes,No,Moderate,No,Aspirin,139,110,91,33.8,High
+72,Male,111.4,180.1,Black,No,Yes,Low,Yes,Atorvastatin,140,106,75,34.3,Hypertension
+55,Male,85.2,159.5,Mixed,No,Yes,Moderate,Yes,Metformin,95,67,62,33.5,Normal
+28,Female,51.6,195.7,Black,No,Yes,Active,Yes,Lisinopril,97,84,92,13.5,High
+23,Male,99.1,179.7,Black,No,No,Moderate,Yes,Lisinopril,176,69,76,30.7,Hypertension
+69,Female,114.0,154.1,White,Yes,No,Moderate,Yes,No Medication,167,73,73,48.0,Hypertension
+47,Female,63.3,188.0,Black,Yes,Yes,Moderate,Yes,Metformin,150,113,100,17.9,Hypertension
+83,Female,105.3,162.7,Other,Yes,Yes,Low,No,No Medication,119,117,93,39.8,Hypertension
+73,Male,103.0,171.1,Black,No,No,Moderate,No,Metformin,149,88,89,35.2,High
+66,Female,68.8,198.3,Asian,No,Yes,Moderate,Yes,Lisinopril,90,77,85,17.5,Normal
+78,Female,110.2,154.8,Black,Yes,Yes,Active,Yes,Metformin,112,80,100,46.0,High
+83,Male,91.7,195.4,Black,Yes,No,Active,Yes,Aspirin,96,79,88,24.0,Normal
+55,Female,101.1,181.2,Asian,Yes,Yes,Low,No,Lisinopril,91,101,87,30.8,Hypertension
+40,Female,88.1,180.5,Other,No,Yes,Active,No,Metformin,104,84,83,27.0,High
+60,Male,87.0,173.4,Black,Yes,No,Low,Yes,Metformin,91,103,77,28.9,Hypertension
+26,Male,75.0,195.1,Mixed,No,Yes,Low,Yes,No Medication,132,75,68,19.7,High
+28,Female,117.0,182.1,White,No,Yes,Active,No,No Medication,100,94,84,35.3,Hypertension
+20,Male,116.4,150.5,Other,No,Yes,Moderate,No,No Medication,120,98,78,51.4,High
+58,Male,67.0,187.9,Black,Yes,No,Low,No,Aspirin,138,91,90,19.0,High
+29,Female,86.4,154.1,Black,Yes,No,Low,Yes,Atorvastatin,93,113,95,36.4,Hypertension
+28,Female,116.7,191.3,Other,Yes,Yes,Active,No,Metformin,180,98,76,31.9,Hypertension
+44,Male,78.6,188.5,Other,Yes,Yes,Moderate,Yes,Metformin,165,107,91,22.1,Hypertension
+69,Male,98.8,187.5,Other,Yes,Yes,Active,No,Atorvastatin,123,78,98,28.1,High
+43,Male,65.5,155.8,Asian,No,No,Low,No,Metformin,169,99,88,27.0,Hypertension
+37,Female,115.4,160.0,Black,No,No,Moderate,Yes,Lisinopril,93,116,97,45.1,Hypertension
+55,Male,104.7,166.9,Other,Yes,No,Active,Yes,Lisinopril,148,70,70,37.6,Hypertension
+35,Female,73.7,179.6,Asian,Yes,No,Moderate,No,Metformin,133,81,99,22.8,High
+29,Female,110.9,163.4,Mixed,No,No,Moderate,No,Aspirin,111,75,60,41.5,Normal
+29,Male,100.8,176.0,Asian,Yes,No,Active,No,Lisinopril,126,64,96,32.5,High
+22,Male,58.5,164.1,Mixed,No,Yes,Moderate,No,Metformin,166,90,84,21.7,Hypertension
+30,Female,101.2,160.8,White,Yes,Yes,Moderate,Yes,Metformin,151,115,94,39.1,Hypertension
+50,Female,94.6,178.9,Mixed,No,No,Moderate,Yes,Atorvastatin,168,103,82,29.6,Hypertension
+35,Female,66.0,181.7,Mixed,No,Yes,Moderate,No,Metformin,125,107,75,20.0,High
+28,Female,109.2,190.2,Asian,No,No,Moderate,Yes,Aspirin,170,60,100,30.2,Hypertension
+27,Female,60.6,184.9,Other,No,No,Active,Yes,Metformin,114,115,65,17.7,Hypertension
+56,Female,53.2,160.1,Black,No,No,Active,No,Lisinopril,145,118,60,20.8,Hypertension
+49,Male,57.9,169.3,Other,No,Yes,Active,Yes,Aspirin,139,94,76,20.2,High
+43,Female,91.1,152.1,Black,No,Yes,Active,Yes,Aspirin,94,89,97,39.4,High
+43,Male,100.3,193.2,Mixed,No,Yes,Moderate,No,Aspirin,173,74,88,26.9,Hypertension
+20,Male,113.0,197.0,Other,No,No,Active,No,Metformin,146,111,89,29.1,Hypertension
+21,Female,110.1,164.7,Asian,Yes,Yes,Low,Yes,Atorvastatin,142,86,83,40.6,High
+57,Male,64.0,171.7,White,No,No,Low,Yes,Metformin,113,68,70,21.7,Normal
+61,Female,71.9,174.2,Black,Yes,No,Low,Yes,Metformin,98,83,89,23.7,High
+57,Male,88.2,160.9,Black,No,No,Low,No,Atorvastatin,126,110,80,34.1,High
+46,Male,66.7,158.8,Black,No,Yes,Low,No,No Medication,119,82,60,26.4,High
+37,Male,95.5,191.8,White,No,No,Moderate,No,Lisinopril,135,77,60,26.0,High
+77,Female,117.6,166.0,White,No,No,Low,No,Lisinopril,128,114,90,42.7,High
+80,Female,64.5,161.0,Mixed,Yes,No,Low,Yes,No Medication,91,78,71,24.9,Normal
+37,Female,119.8,178.0,Black,No,No,Low,No,No Medication,160,106,92,37.8,Hypertension
+81,Female,65.8,177.6,Asian,No,Yes,Active,No,Lisinopril,98,104,100,20.9,Hypertension
+39,Female,93.7,177.9,Other,Yes,No,Low,Yes,Metformin,104,110,90,29.6,Hypertension
+36,Male,96.1,155.2,Black,No,Yes,Low,Yes,Lisinopril,141,94,96,39.9,Hypertension
+42,Male,80.8,193.1,White,No,Yes,Active,Yes,Metformin,151,117,64,21.7,Hypertension
+54,Male,108.3,189.6,Asian,Yes,No,Active,No,Aspirin,140,102,97,30.1,Hypertension
+52,Female,58.8,177.9,Black,Yes,Yes,Moderate,No,Aspirin,90,96,64,18.6,Hypertension
+76,Male,114.2,190.3,Black,No,Yes,Moderate,No,Metformin,160,85,90,31.5,High
+40,Female,79.8,150.6,Mixed,Yes,Yes,Active,No,Aspirin,171,77,75,35.2,Hypertension
+26,Female,103.3,164.0,Asian,Yes,No,Moderate,No,Aspirin,121,104,66,38.4,High
+57,Female,58.6,161.2,Asian,No,No,Low,No,Aspirin,113,81,62,22.6,High
+32,Female,119.6,154.2,Mixed,No,No,Active,Yes,Metformin,159,86,87,50.3,High
+60,Female,56.3,178.9,Other,Yes,No,Active,Yes,Atorvastatin,159,65,96,17.6,Hypertension
+35,Female,94.9,168.5,Black,Yes,No,Active,Yes,Lisinopril,176,62,94,33.4,Hypertension
+47,Female,104.9,170.8,Other,No,Yes,Active,No,No Medication,113,95,69,36.0,Hypertension
+68,Male,114.8,184.2,Asian,No,No,Active,No,Lisinopril,105,65,82,33.8,Normal
+36,Male,66.1,150.2,Other,Yes,Yes,Low,Yes,Metformin,102,107,65,29.3,Hypertension
+43,Female,108.6,168.8,White,Yes,Yes,Low,No,Metformin,112,68,76,38.1,Normal
+58,Male,83.8,191.9,Asian,Yes,Yes,Active,No,Aspirin,120,70,98,22.8,High
+76,Male,92.8,195.4,Asian,Yes,No,Low,Yes,No Medication,109,113,60,24.3,Hypertension
+79,Male,104.9,165.9,Asian,Yes,No,Low,No,Lisinopril,132,106,92,38.1,High
+61,Male,100.7,169.9,Asian,No,Yes,Moderate,No,No Medication,168,68,74,34.9,Hypertension
+47,Female,81.9,171.2,Other,Yes,Yes,Moderate,Yes,Lisinopril,121,77,97,27.9,High
+71,Female,51.7,184.3,Asian,Yes,Yes,Active,Yes,Atorvastatin,124,107,74,15.2,High
+85,Female,56.0,184.1,Asian,Yes,Yes,Low,No,Atorvastatin,122,78,70,16.5,High
+73,Female,111.9,179.5,Asian,No,No,Low,No,No Medication,127,100,75,34.7,High
+28,Female,115.5,198.6,Mixed,Yes,Yes,Low,Yes,Metformin,122,69,65,29.3,High
+37,Female,51.6,197.8,Mixed,Yes,No,Low,Yes,Aspirin,140,65,95,13.2,Hypertension
+72,Male,90.6,154.2,Mixed,No,No,Active,No,Atorvastatin,173,117,79,38.1,Hypertension
+68,Male,63.7,164.9,Other,Yes,No,Moderate,Yes,Aspirin,179,109,78,23.4,Hypertension
+31,Male,79.9,194.4,White,No,No,Active,No,Metformin,178,63,73,21.1,Hypertension
+88,Male,58.8,198.0,Asian,Yes,Yes,Low,No,No Medication,92,107,84,15.0,Hypertension
+21,Male,93.3,166.3,Other,No,No,Active,Yes,Lisinopril,107,82,69,33.7,High
+64,Male,69.5,194.9,Black,Yes,No,Low,No,No Medication,109,73,89,18.3,Normal
+62,Female,75.8,183.2,Other,Yes,No,Low,Yes,Lisinopril,105,115,89,22.6,Hypertension
+46,Male,114.3,195.8,Asian,No,No,Moderate,No,No Medication,104,109,88,29.8,Hypertension
+64,Male,70.1,168.8,Other,No,No,Active,Yes,No Medication,145,118,68,24.6,Hypertension
+26,Male,72.1,174.0,Asian,Yes,Yes,Active,Yes,Atorvastatin,95,114,93,23.8,Hypertension
+31,Male,50.9,183.4,Black,No,No,Moderate,Yes,Metformin,180,87,82,15.1,High
+58,Male,114.1,168.0,Black,No,Yes,Low,Yes,No Medication,132,86,70,40.4,High
+34,Female,74.5,169.2,Mixed,Yes,Yes,Moderate,No,No Medication,146,71,74,26.0,Hypertension
+39,Male,63.0,195.3,Black,Yes,Yes,Moderate,No,Lisinopril,95,63,60,16.5,Normal
+89,Female,50.9,200.0,Black,No,Yes,Active,Yes,Atorvastatin,123,111,84,12.7,High
+34,Male,62.6,193.8,Mixed,Yes,Yes,Active,Yes,Atorvastatin,147,69,78,16.7,Hypertension
+26,Female,60.8,170.6,Mixed,No,No,Low,Yes,No Medication,113,102,89,20.9,Hypertension
+32,Male,87.7,187.7,White,Yes,Yes,Active,Yes,Aspirin,169,107,96,24.9,Hypertension
+22,Female,80.9,180.0,White,Yes,No,Active,Yes,Aspirin,178,70,70,25.0,Hypertension
+46,Male,72.2,175.5,Black,No,No,Low,Yes,Atorvastatin,142,98,87,23.4,Hypertension
+19,Female,59.9,156.7,Mixed,Yes,No,Active,Yes,No Medication,91,73,78,24.4,Normal
+66,Female,98.9,166.9,White,Yes,Yes,Moderate,Yes,Atorvastatin,94,60,93,35.5,Normal
+61,Male,70.2,178.8,Other,No,Yes,Low,No,Metformin,120,75,86,22.0,High
+38,Male,91.6,167.0,Asian,Yes,Yes,Moderate,Yes,Atorvastatin,143,76,62,32.8,Hypertension
+41,Male,97.3,160.4,Mixed,Yes,No,Moderate,Yes,No Medication,150,90,67,37.8,Hypertension
+38,Male,57.8,193.8,Asian,Yes,No,Active,Yes,Atorvastatin,131,63,78,15.4,High
+45,Male,75.0,163.2,Other,Yes,Yes,Low,No,No Medication,155,100,95,28.2,Hypertension
+62,Female,107.9,153.6,Other,No,Yes,Active,Yes,Aspirin,169,84,85,45.7,High
+75,Female,103.8,161.3,White,Yes,Yes,Active,Yes,Atorvastatin,168,75,95,39.9,Hypertension
+32,Female,118.2,173.9,Other,Yes,Yes,Active,Yes,Lisinopril,124,76,77,39.1,High
+89,Female,54.0,181.3,Mixed,No,No,Active,Yes,Metformin,170,94,71,16.4,Hypertension
+66,Female,53.0,195.2,Mixed,Yes,No,Active,No,Metformin,134,100,97,13.9,High
+63,Female,104.1,180.9,Other,Yes,Yes,Active,No,Aspirin,130,112,90,31.8,High
+76,Female,100.4,180.5,White,Yes,No,Moderate,No,Metformin,179,97,85,30.8,Hypertension
+25,Male,104.7,159.7,Asian,Yes,Yes,Low,Yes,Aspirin,135,86,60,41.1,High
+78,Male,82.7,150.8,White,No,Yes,Low,No,Atorvastatin,156,114,85,36.4,Hypertension
+26,Female,116.1,190.8,White,Yes,No,Low,No,Metformin,173,100,98,31.9,Hypertension
+85,Male,61.5,175.8,Mixed,No,Yes,Moderate,Yes,Atorvastatin,173,102,100,19.9,Hypertension
+64,Male,103.4,168.3,Other,No,Yes,Moderate,Yes,Atorvastatin,179,97,77,36.5,Hypertension
+45,Male,73.9,163.7,Black,No,Yes,Moderate,Yes,No Medication,131,70,93,27.6,High
+22,Male,89.3,161.3,Asian,Yes,Yes,Active,Yes,Aspirin,115,86,66,34.3,High
+35,Female,104.3,186.2,Asian,No,No,Active,Yes,Aspirin,164,111,94,30.1,Hypertension
+56,Male,118.0,158.3,White,Yes,No,Moderate,No,Atorvastatin,111,91,69,47.1,Hypertension
+73,Female,50.7,157.6,Asian,No,No,Active,Yes,No Medication,117,84,88,20.4,High
+43,Male,81.9,194.7,Black,Yes,Yes,Moderate,No,Aspirin,158,107,60,21.6,Hypertension
+89,Male,67.2,167.3,Asian,No,Yes,Moderate,Yes,Lisinopril,143,104,76,24.0,Hypertension
