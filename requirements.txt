@@ -1,5 +1,4 @@
 pandas
-llama_index
 xlrd
 xlwt
 flask
@@ -12,9 +11,6 @@ frontend
 streamlit
 streamlit-extras
 openai
-vertexai
-jupyter
-huggingface_hub
 PyPDF2
 scikit-learn
 matplotlib
@@ -31,17 +27,10 @@ wordcloud
 pytesseract
 collections-extended
 nltk
-extract-msg
-pillow
-moviepy
-pinecone-client
-crewai[tools]
 faiss-cpu
 sentence-transformers
-transformers
 streamlit_extras
 datasets
-llama-index-core
 numpy
 langchain
 langchain-openai
@@ -50,4 +39,3 @@ langchain-community
 requests
 pdfplumber
 ollama
-pgpt_python
