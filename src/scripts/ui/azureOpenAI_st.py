@@ -41,7 +41,7 @@ def apply_guidelines_to_table(ptData, niceGuide):
 
   client = AzureOpenAI(
       azure_endpoint = azOpenAI_Endpoint,
-      api_key = apiKey,
+      api_key = API_KEY,
       api_version="2024-02-15-preview"
   )
   # Make a request to the OpenAI API
