@@ -1,6 +1,7 @@
 import math
 import numbers
 import os,sys
+import textwrap
 from typing import Optional, Tuple
 import pandas as pd
 import plotly.express as px
@@ -14,53 +15,218 @@ st.set_page_config(layout='wide',
                    page_title='AI MedAssitant',
                    )
 
-CODE_BLOCK_STYLE = """
-    <style>
-        pre code, code {
-            white-space: pre-wrap !important;
-            word-break: break-word;
-        }
-        .metric-card {
-            background: rgba(49, 51, 63, 0.08);
-            border-radius: 0.75rem;
-            padding: 0.9rem 1.1rem;
-            border: 1px solid rgba(250, 250, 250, 0.1);
-        }
-        .metric-card h4 {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #6d7d8b;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .metric-card p {
-            margin: 0.2rem 0 0;
-            font-size: 1.6rem;
-            font-weight: 600;
-        }
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: rgba(28, 131, 225, 0.15);
-            color: #1c83e1;
-            padding: 0.25rem 0.65rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        .badge--warning {
-            background: rgba(255, 159, 67, 0.16);
-            color: #cc6c00;
-        }
-        .badge--danger {
-            background: rgba(234, 67, 53, 0.18);
-            color: #a52714;
-        }
-    </style>
+APP_STYLE = """
+<style>
+:root{
+  --bg:#0b1220;
+  --panel:#0f1a2e;
+  --panel2:#111f38;
+  --muted:#93a4c7;
+  --text:#e8efff;
+  --brand:#3b82f6;
+  --good:#22c55e;
+  --warn:#f59e0b;
+  --bad:#ef4444;
+  --border:rgba(255,255,255,.08);
+  --shadow: 0 10px 25px rgba(0,0,0,.35);
+  --radius: 16px;
+  --radius2: 12px;
+}
+.stApp{
+  background: radial-gradient(1200px 800px at 20% 0%, #12234a 0%, var(--bg) 50%, #070c16 100%);
+  color:var(--text);
+}
+.block-container{
+  padding-top:20px;
+  padding-left:24px;
+  padding-right:24px;
+}
+section[data-testid="stSidebar"]{
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border-right:1px solid var(--border);
+}
+section[data-testid="stSidebar"] .css-1d391kg{
+  color:var(--text);
+}
+pre code, code {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+}
+.hero{
+  display:flex;
+  gap:20px;
+  align-items:stretch;
+  background:linear-gradient(120deg, rgba(59,130,246,0.22), rgba(17,24,39,0.75));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  padding:18px 20px;
+  border-radius:var(--radius);
+}
+.hero .eyebrow{
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-size:0.75rem;
+  margin:0 0 6px 0;
+}
+.hero h1{
+  margin:0;
+  font-size:1.6rem;
+  color:var(--text);
+}
+.hero .subtitle{
+  color:var(--muted);
+  margin:6px 0 10px 0;
+}
+.hero .meta{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.hero .stat-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:10px;
+  min-width:260px;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 12px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:0.8rem;
+  background:rgba(255,255,255,0.06);
+  border:1px solid var(--border);
+  color:var(--text);
+}
+.pill.good{ background:rgba(34,197,94,0.12); color:#6ee7b7; border-color:rgba(110,231,183,.4);}
+.pill.warn{ background:rgba(245,158,11,0.12); color:#fbbf24; border-color:rgba(251,191,36,.35);}
+.pill.bad{ background:rgba(239,68,68,0.12); color:#fca5a5; border-color:rgba(252,165,165,.35);}
+.metric-card{
+  background:var(--panel);
+  border-radius:var(--radius2);
+  padding:12px 14px;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  color:var(--text);
+}
+.metric-card h4{
+  margin:0;
+  font-size:0.85rem;
+  color:var(--muted);
+  letter-spacing:0.02em;
+}
+.metric-card p{
+  margin:4px 0 2px 0;
+  font-size:1.45rem;
+  font-weight:700;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(59,130,246,0.15);
+  color:#9bc2ff;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:0.75rem;
+  font-weight:600;
+}
+.badge--warning { background: rgba(245,158,11,0.16); color: #facc15; }
+.badge--danger { background: rgba(239,68,68,0.16); color: #fca5a5; }
+.card-shell{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:14px 16px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.title-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:6px;
+}
+.title-row h3{ margin:0; color:var(--text); }
+.title-row .muted{ color:var(--muted); }
+.muted{ color:var(--muted); }
+.stTabs [data-baseweb="tab"]{
+  background:var(--panel2);
+  color:var(--text);
+  border:1px solid var(--border);
+  border-bottom:none;
+  margin-right:6px;
+  border-radius:var(--radius2) var(--radius2) 0 0;
+}
+.stTabs [data-baseweb="tab"]:hover{
+  background:rgba(255,255,255,0.04);
+}
+.stTabs [aria-selected="true"]{
+  background:var(--panel);
+  color:var(--text);
+  border-bottom:1px solid var(--panel);
+}
+div[data-testid="stPlotlyChart"]{
+  background:var(--panel);
+  padding:12px;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+div[data-testid="stDataFrame"]{
+  background:var(--panel);
+  padding:8px;
+  border-radius:var(--radius2);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+[data-testid="stTable"] table{
+  background:var(--panel);
+  color:var(--text);
+}
+[data-testid="stMarkdown"] table{
+  background:var(--panel);
+  color:var(--text);
+}
+div[data-baseweb="select"]{
+  color:var(--text);
+}
+/* tweak inputs */
+input, textarea{
+  background:var(--panel2) !important;
+  color:var(--text) !important;
+  border-radius:10px !important;
+  border:1px solid var(--border) !important;
+}
+/* emphasis for alert blocks */
+.callout{
+  background:rgba(239,68,68,0.08);
+  border:1px solid rgba(239,68,68,0.35);
+  color:#fecaca;
+  padding:10px 12px;
+  border-radius:var(--radius2);
+  margin-bottom:8px;
+}
+.callout.warn{
+  background:rgba(245,158,11,0.08);
+  border-color:rgba(245,158,11,0.35);
+  color:#fcd34d;
+}
+.empty-state{
+  background:var(--panel);
+  border:1px dashed var(--border);
+  padding:18px;
+  border-radius:var(--radius);
+  text-align:center;
+  color:var(--muted);
+}
+</style>
 """
 
-st.markdown(CODE_BLOCK_STYLE, unsafe_allow_html=True)
+st.markdown(APP_STYLE, unsafe_allow_html=True)
 
 @st.cache_data(show_spinner=False)
 def get_ai_response(patient_id: int):
@@ -91,13 +257,132 @@ def render_metric_card(title: str, value: str | int | float, badge: str | None =
         elif badge_level == "danger":
             badge_class += " badge--danger"
         badge_html = f'<span class="{badge_class}">{badge}</span>'
-    return f"""
+    return textwrap.dedent(
+        f"""
         <div class="metric-card">
             <h4>{title}</h4>
             <p>{value}</p>
             {badge_html}
         </div>
-    """
+        """
+    ).strip()
+
+def render_kpi(title: str, value: str, delta: str | None = None, tone: str = "good") -> str:
+    pill_class = "pill"
+    if tone in {"good", "warn", "bad"}:
+        pill_class += f" {tone}"
+    delta_html = f'<span class="{pill_class}">{delta}</span>' if delta else ""
+    return textwrap.dedent(
+        f"""
+        <div class="metric-card">
+            <div class="title-row">
+                <h4>{title}</h4>
+                {delta_html}
+            </div>
+            <p>{value}</p>
+        </div>
+        """
+    ).strip()
+
+def score_vitals_risk(row: pd.Series, bmi_val: Optional[float]) -> list[dict]:
+    """Return risk scores (0-100, higher = riskier) for radar plot."""
+    scores = []
+    # BP score
+    try:
+        sys_bp = float(row.get('Systolic BP(mmHg)', math.nan))
+        dia_bp = float(row.get('Diastolic(mmHg)', math.nan))
+    except (TypeError, ValueError):
+        sys_bp = dia_bp = math.nan
+    bp_score = None
+    if not math.isnan(sys_bp) and not math.isnan(dia_bp):
+        if sys_bp >= 160 or dia_bp >= 100:
+            bp_score = 92
+        elif sys_bp >= 140 or dia_bp >= 90:
+            bp_score = 78
+        elif sys_bp >= 130 or dia_bp >= 85:
+            bp_score = 64
+        elif sys_bp >= 120 or dia_bp >= 80:
+            bp_score = 48
+        else:
+            bp_score = 28
+    elif isinstance(row.get('Result_BP'), str):
+        bp_score = 78 if row.get('Result_BP', '').lower() == 'high' else 42
+    if bp_score is not None:
+        scores.append({"Metric": "Blood Pressure", "Score": bp_score})
+
+    # Cholesterol
+    chol_score = None
+    try:
+        ldl_val = float(row.get('LDL (mg/dL)', math.nan))
+    except (TypeError, ValueError):
+        ldl_val = math.nan
+    if not math.isnan(ldl_val):
+        if ldl_val >= 160:
+            chol_score = 92
+        elif ldl_val >= 130:
+            chol_score = 76
+        elif ldl_val >= 100:
+            chol_score = 62
+        else:
+            chol_score = 34
+    elif isinstance(row.get('Result_cholesterol'), str):
+        chol_score = 72 if row.get('Result_cholesterol', '').lower() == 'high' else 42
+    if chol_score is not None:
+        scores.append({"Metric": "Cholesterol", "Score": chol_score})
+
+    # HbA1c
+    hba1c_score = None
+    try:
+        hba1c_val = float(row.get('HbA1c', math.nan))
+    except (TypeError, ValueError):
+        hba1c_val = math.nan
+    if not math.isnan(hba1c_val):
+        if hba1c_val >= 9:
+            hba1c_score = 96
+        elif hba1c_val >= 8:
+            hba1c_score = 82
+        elif hba1c_val >= 7:
+            hba1c_score = 70
+        elif hba1c_val >= 6.5:
+            hba1c_score = 58
+        elif hba1c_val >= 6:
+            hba1c_score = 44
+        else:
+            hba1c_score = 28
+    if hba1c_score is not None:
+        scores.append({"Metric": "HbA1c", "Score": hba1c_score})
+
+    # BMI
+    if bmi_val is not None and not math.isnan(bmi_val):
+        if bmi_val >= 35:
+            bmi_score = 95
+        elif bmi_val >= 30:
+            bmi_score = 82
+        elif bmi_val >= 27.5:
+            bmi_score = 72
+        elif bmi_val >= 25:
+            bmi_score = 60
+        elif bmi_val >= 18.5:
+            bmi_score = 32
+        else:
+            bmi_score = 54  # underweight risk
+        scores.append({"Metric": "BMI", "Score": bmi_score})
+    return scores
+
+def lifestyle_scores(row: pd.Series) -> pd.DataFrame:
+    """Create a simple lifestyle scoring table for visualisation."""
+    mappings = {
+        'Smoking': {'No': 10, 'Former': 25, 'Yes': 85},
+        'Drinking': {'No': 12, 'Moderate': 36, 'Yes': 72, 'Heavy': 90},
+        'Food habits': {'Healthy': 18, 'Moderate': 44, 'Unhealthy': 80},
+        'Activities': {'Active': 18, 'Moderate': 42, 'Sedentary': 78}
+    }
+    rows = []
+    for key, rule in mappings.items():
+        raw = row.get(key, "Unknown")
+        score = rule.get(raw, 50)
+        rows.append({"Category": key, "Status": str(raw), "RiskScore": score})
+    return pd.DataFrame(rows)
 
 def collect_risk_flags(row):
     flags = []
@@ -265,6 +550,37 @@ if patNhs_clean:
     )
     bmi_badge, bmi_badge_level = classify_bmi(bmi_value)
     risk_flags = collect_risk_flags(base_row)
+    bmi_pill_class = "good" if bmi_badge_level == "info" else ("warn" if bmi_badge_level == "warning" else "bad")
+    risk_scores = score_vitals_risk(base_row, bmi_value)
+    wellness_score = None
+    if risk_scores:
+        avg_risk = sum(item["Score"] for item in risk_scores) / len(risk_scores)
+        wellness_score = max(0, 100 - int(avg_risk))
+
+    hero = textwrap.dedent(
+        f"""
+        <div class="hero">
+            <div style="flex:1;">
+                <div class="eyebrow">NHS MedAssist</div>
+                <h1>Clinical cockpit for patient {patient_id}</h1>
+                <div class="subtitle">AI-assisted overview aligned to NICE guidance. Review risks, vitals, and lifestyle signals at a glance.</div>
+                <div class="meta">
+                    <span class="pill">Age {base_row.get('Age','N/A')}</span>
+                    <span class="pill">{base_row.get('Gender','N/A')}</span>
+                    <span class="pill">{base_row.get('Ethnicity','N/A')}</span>
+                    <span class="pill {bmi_pill_class}">BMI {bmi_display}</span>
+                </div>
+            </div>
+            <div class="stat-grid">
+                {render_metric_card("Blood Pressure", base_row.get('Result_BP', 'N/A'), badge=format_bp_badge(base_row), badge_level="danger" if str(base_row.get('Result_BP', '')).lower() == 'high' else "info")}
+                {render_metric_card("Cholesterol", base_row.get('Result_cholesterol', 'N/A'), badge=format_ldl_badge(base_row), badge_level="warning" if str(base_row.get('Result_cholesterol', '')).lower() == 'high' else "info")}
+                {render_metric_card("HbA1c", base_row.get('Result_HbA1c', 'N/A'), badge=format_hba1c_badge(base_row), badge_level="warning" if str(base_row.get('Result_HbA1c', '')).lower() == 'high' else "info")}
+                {render_metric_card("Wellness Index", f"{wellness_score} / 100" if wellness_score is not None else "N/A", badge="Lower = healthier" if wellness_score is not None else None, badge_level="info")}
+            </div>
+        </div>
+        """
+    ).strip()
+    st.markdown(hero, unsafe_allow_html=True)
 
     bp_chart = create_bar_chart(
         base_row,
@@ -304,7 +620,7 @@ if patNhs_clean:
         )
 
         with overview_tab:
-            st.subheader("Patient Snapshot")
+            st.markdown("### Patient Snapshot")
             summary_cols = st.columns(4)
             summary_cols[0].markdown(render_metric_card("Age", base_row.get('Age', 'N/A')), unsafe_allow_html=True)
             summary_cols[1].markdown(render_metric_card("Gender", base_row.get('Gender', 'N/A')), unsafe_allow_html=True)
@@ -313,6 +629,55 @@ if patNhs_clean:
                 render_metric_card("BMI", bmi_display, badge=bmi_badge, badge_level=bmi_badge_level),
                 unsafe_allow_html=True
             )
+
+            viz_cols = st.columns(2)
+            if risk_scores:
+                radar_df = pd.DataFrame(risk_scores)
+                blue_red_colors = px.colors.sequential.Bluered
+                radar_color = blue_red_colors[-2] if blue_red_colors else "#3b82f6"
+                radar_fig = px.line_polar(
+                    radar_df,
+                    r="Score",
+                    theta="Metric",
+                    line_close=True,
+                    color_discrete_sequence=[radar_color]
+                )
+                radar_fig.update_traces(fill="toself")
+                radar_fig.update_layout(
+                    title="Risk Radar (higher = riskier)",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    polar=dict(
+                        radialaxis=dict(range=[0, 100])
+                    ),
+                    margin=dict(l=10, r=10, t=50, b=10)
+                )
+                viz_cols[0].plotly_chart(radar_fig, use_container_width=True)
+            else:
+                viz_cols[0].info("Not enough vitals to build a risk radar.")
+
+            lifestyle_df = lifestyle_scores(base_row)
+            if not lifestyle_df.empty:
+                life_fig = px.bar(
+                    lifestyle_df,
+                    x="RiskScore",
+                    y="Category",
+                    orientation="h",
+                    color="Category",
+                    text="Status",
+                    color_discrete_sequence=px.colors.sequential.Teal
+                )
+                life_fig.update_layout(
+                    title="Lifestyle Risk Snapshot",
+                    xaxis_title="Risk score (higher = riskier)",
+                    yaxis_title="",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    margin=dict(l=10, r=10, t=50, b=30),
+                    showlegend=False
+                )
+                viz_cols[1].plotly_chart(life_fig, use_container_width=True)
+            else:
+                viz_cols[1].info("Lifestyle data unavailable.")
 
             status_cols = st.columns(3)
             status_cols[0].markdown(
@@ -346,13 +711,11 @@ if patNhs_clean:
             if risk_flags:
                 st.markdown("#### Key Alerts")
                 for message, level in risk_flags:
-                    if level == 'danger':
-                        st.error(message)
-                    else:
-                        st.warning(message)
+                    tone = "bad" if level == "danger" else "warn"
+                    st.markdown(f'<div class="callout {"warn" if tone=="warn" else ""}">{message}</div>', unsafe_allow_html=True)
 
         with clinical_tab:
-            st.subheader("Clinical Metrics Dashboard")
+            st.markdown("### Clinical Metrics Dashboard")
             chart_cols = st.columns(2)
             if bp_chart:
                 chart_cols[0].plotly_chart(bp_chart, use_container_width=True)
@@ -401,7 +764,7 @@ if patNhs_clean:
             habits = ptTbl[['Smoking', 'Drinking', 'Food habits', 'Activities']]
             st.markdown("#### Lifestyle Indicators")
             st.dataframe(habits.reset_index(drop=True).style.applymap(color_habits),
-                         hide_index=True,use_container_width=True)
+                            hide_index=True,use_container_width=True)
 
             caseHist = ptTbl[['Family history', 'Ongoing disease', 'Ongoing medications']]
             st.markdown("#### Medical History")
@@ -432,4 +795,14 @@ if patNhs_clean:
             disabled=True
         )
 else:
-    st.write("Enter the Patient NHS Number to generate the appropriate response.")
+    st.markdown(
+        textwrap.dedent(
+            """
+            <div class="empty-state">
+                <h3>MedAssist Clinical Cockpit</h3>
+                <p>Enter an NHS patient number in the sidebar to load vitals, labs, and AI guidance with the new experience.</p>
+            </div>
+            """
+        ).strip(),
+        unsafe_allow_html=True
+    )
